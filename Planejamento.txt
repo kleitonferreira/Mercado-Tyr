@@ -1,0 +1,21 @@
+Software de gestão para um mercado
+
+	A ideia é simples, porem muito eficaz para ajudar a administrar uma mercado tanto como de pequeno porte quanto de grande porte
+nele sera possivel ter um controle de estoque,um controle de vendas e a separação do que sera lucro e do que será reevestido para comprar produtos.
+
+Recursos:
+
+controle de caixa- separando o que foi lucro, o que sera reevestido com base nos produtos gastos, e o total de vendas do dia.
+controle de estoque- conseguir de forma clara visualizar produtos que ainda estao em estoque e os que estao faltando.
+cadastro de produtos novos.
+visualização de lucro diario,semanal e mensal.
+sistema de login simples.
+
+telas:
+
+tela de login e de cadastro.
+tela principal(home)- mostra a informação de quem esta logado, mostra data e hora , botao para executar uma nova compra
+botao para verificar o estoque, botao para verificar historico de vendas, botao para fechar o caixa(finalizar o dia), botao para fazer logoff.
+tela de execução de compra.
+tela de estoque.
+historico de vendas.
