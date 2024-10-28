@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,5 +27,77 @@ namespace SoftwareMercado
             this.Hide();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+
+        {
+
+            Application.Exit();
+
+        }
+
+        string strConexao = MDI.strConexao;
+        
+
+        private void button1_Click(object sender, EventArgs e)
+
+
+        {
+
+            string sql = "insert into usuario" +
+                "(nome_usuario,caixa,Senha_usuario)" +
+                "values" +
+                "('" + operadorTXT.Text + "'," + CaixaTXT.Text + "," + senhaTXT.Text + ")";
+
+            MySqlConnection conexao = new MySqlConnection(strConexao);
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
+            cmd.CommandType = System.Data.CommandType.Text;
+            conexao.Open();
+
+
+            string chave = chaveTXT.Text;
+            if (chave != "AAAA")
+            {
+
+                MessageBox.Show("Chave Invalida");
+                Application.Restart();
+
+            }
+            else
+            {
+
+                try
+                {
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        
+                        MessageBox.Show("Registro realizado com sucesso!, faça login para continuar!");
+                        loginFRM FRM = new loginFRM();
+                        FRM.Show();
+                        this.Close();
+
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+
+                }
+                finally
+                {
+
+                    conexao.Close();
+
+                }
+
+            }
+
+        } 
     }
 }

@@ -32,11 +32,13 @@
             panel1 = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
+            button2 = new Button();
+            button1 = new Button();
             label5 = new Label();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            senhaTXT = new TextBox();
+            chaveTXT = new TextBox();
+            operadorTXT = new TextBox();
+            CaixaTXT = new TextBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
@@ -49,7 +51,8 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(692, 0);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(691, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(355, 614);
             panel1.TabIndex = 0;
@@ -65,11 +68,13 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
+            panel3.Controls.Add(button2);
+            panel3.Controls.Add(button1);
             panel3.Controls.Add(label5);
-            panel3.Controls.Add(textBox4);
-            panel3.Controls.Add(textBox3);
-            panel3.Controls.Add(textBox2);
-            panel3.Controls.Add(textBox1);
+            panel3.Controls.Add(senhaTXT);
+            panel3.Controls.Add(chaveTXT);
+            panel3.Controls.Add(operadorTXT);
+            panel3.Controls.Add(CaixaTXT);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(label2);
@@ -79,51 +84,75 @@
             panel3.Size = new Size(427, 461);
             panel3.TabIndex = 1;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(242, 135, 5);
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(254, 379);
+            button2.Name = "button2";
+            button2.Size = new Size(100, 50);
+            button2.TabIndex = 3;
+            button2.Text = "Cancelar";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(242, 135, 5);
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(67, 379);
+            button1.Name = "button1";
+            button1.Size = new Size(100, 50);
+            button1.TabIndex = 2;
+            button1.Text = "Registrar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // label5
             // 
             label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Malgun Gothic", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(67, 409);
+            label5.Location = new Point(67, 336);
             label5.Name = "label5";
             label5.Size = new Size(123, 17);
             label5.TabIndex = 1;
             label5.Text = "Voltar para o login";
             label5.Click += label5_Click;
             // 
-            // textBox4
+            // senhaTXT
             // 
-            textBox4.Location = new Point(67, 257);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(287, 23);
-            textBox4.TabIndex = 1;
+            senhaTXT.Location = new Point(67, 220);
+            senhaTXT.Name = "senhaTXT";
+            senhaTXT.Size = new Size(287, 23);
+            senhaTXT.TabIndex = 1;
             // 
-            // textBox3
+            // chaveTXT
             // 
-            textBox3.Location = new Point(67, 355);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(287, 23);
-            textBox3.TabIndex = 1;
+            chaveTXT.Location = new Point(67, 294);
+            chaveTXT.Name = "chaveTXT";
+            chaveTXT.Size = new Size(287, 23);
+            chaveTXT.TabIndex = 1;
             // 
-            // textBox2
+            // operadorTXT
             // 
-            textBox2.Location = new Point(67, 166);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(287, 23);
-            textBox2.TabIndex = 1;
+            operadorTXT.Location = new Point(67, 146);
+            operadorTXT.Name = "operadorTXT";
+            operadorTXT.Size = new Size(287, 23);
+            operadorTXT.TabIndex = 1;
             // 
-            // textBox1
+            // CaixaTXT
             // 
-            textBox1.Location = new Point(67, 72);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(287, 23);
-            textBox1.TabIndex = 1;
+            CaixaTXT.Location = new Point(67, 72);
+            CaixaTXT.Name = "CaixaTXT";
+            CaixaTXT.Size = new Size(287, 23);
+            CaixaTXT.TabIndex = 1;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Malgun Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(160, 307);
+            label4.Location = new Point(160, 246);
             label4.Name = "label4";
             label4.Size = new Size(111, 45);
             label4.TabIndex = 0;
@@ -133,7 +162,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Malgun Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(160, 209);
+            label3.Location = new Point(160, 172);
             label3.Name = "label3";
             label3.Size = new Size(111, 45);
             label3.TabIndex = 0;
@@ -143,7 +172,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Malgun Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(133, 118);
+            label2.Location = new Point(131, 98);
             label2.Name = "label2";
             label2.Size = new Size(166, 45);
             label2.TabIndex = 0;
@@ -186,9 +215,11 @@
         private Label label2;
         private Label label1;
         private Label label5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox senhaTXT;
+        private TextBox chaveTXT;
+        private TextBox operadorTXT;
+        private TextBox CaixaTXT;
+        private Button button1;
+        private Button button2;
     }
 }

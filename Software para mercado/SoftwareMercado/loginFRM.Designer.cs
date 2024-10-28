@@ -32,6 +32,8 @@
             panel1 = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
+            button1 = new Button();
+            btoLogar = new Button();
             label4 = new Label();
             senhaTXT = new TextBox();
             operadorTXT = new TextBox();
@@ -63,6 +65,8 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
+            panel3.Controls.Add(button1);
+            panel3.Controls.Add(btoLogar);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(senhaTXT);
             panel3.Controls.Add(operadorTXT);
@@ -75,11 +79,35 @@
             panel3.Size = new Size(427, 461);
             panel3.TabIndex = 1;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(242, 135, 5);
+            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(262, 399);
+            button1.Name = "button1";
+            button1.Size = new Size(100, 50);
+            button1.TabIndex = 3;
+            button1.Text = "Cancelar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // btoLogar
+            // 
+            btoLogar.BackColor = Color.FromArgb(242, 135, 5);
+            btoLogar.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btoLogar.Location = new Point(62, 399);
+            btoLogar.Name = "btoLogar";
+            btoLogar.Size = new Size(100, 50);
+            btoLogar.TabIndex = 3;
+            btoLogar.Text = "Logar";
+            btoLogar.UseVisualStyleBackColor = false;
+            btoLogar.Click += btoLogar_Click;
+            // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Malgun Gothic", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.Location = new Point(62, 379);
+            label4.Location = new Point(62, 346);
             label4.Name = "label4";
             label4.Size = new Size(152, 17);
             label4.TabIndex = 2;
@@ -148,6 +176,7 @@
             Name = "loginFRM";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += loginFRM_Load;
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
@@ -166,5 +195,7 @@
         private TextBox caixaTXT;
         private Label label2;
         private Label label3;
+        private Button btoLogar;
+        private Button button1;
     }
 }
