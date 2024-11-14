@@ -32,16 +32,23 @@ namespace SoftwareMercado
 
             string quantidade = QNTDprodutoTXT.Text;
             string produto = NomeProdutoTXT.Text;
+            string valor = ValorTXT.Text;
             bool QTNDnumero = int.TryParse(quantidade, out int resultado);
-            bool txtnumero =  int.TryParse(produto, out resultado);
+            bool txtnumero = int.TryParse(produto, out resultado);
+            
 
 
-            if (QTNDnumero && !txtnumero) {
+            if (QTNDnumero && !txtnumero)
+            {
+
+               
+                valor = valor.Replace(",", ".");
+                
 
                 string sql = "insert into produto" +
-                    "(Nome_Produto,quantidade_produto)" +
+                    "(Nome_Produto,quantidade_produto,valor_produto)" +
                     "values" +
-                    "('" + produto + "','" + quantidade + "')";
+                    "('" + produto + "','" + quantidade + "','"+valor+"')";
 
                 MySqlConnection conexao = new MySqlConnection(strConexao);
                 MySqlCommand cmd = new MySqlCommand(sql, conexao);
@@ -54,16 +61,18 @@ namespace SoftwareMercado
 
                     int rowsAffected = cmd.ExecuteNonQuery();
 
-                    if (rowsAffected > 0) {
+                    if (rowsAffected > 0)
+                    {
 
                         MessageBox.Show("Produto Cadastrado com Sucesso!");
                         QNTDprodutoTXT.Text = "";
                         NomeProdutoTXT.Text = "";
-                    
+                        ValorTXT.Text = "";
+
                     }
 
                 }
-                catch (Exception ex) 
+                catch (Exception ex)
                 {
 
                     MessageBox.Show(ex.Message + "erro: produtos nao cadastrados!");
@@ -82,6 +91,11 @@ namespace SoftwareMercado
                 MessageBox.Show("Nome do Produto ou quantidade Invalidas!");
 
             }
+
+        }
+
+        private void AdicionarProduto_Load(object sender, EventArgs e)
+        {
 
         }
     }

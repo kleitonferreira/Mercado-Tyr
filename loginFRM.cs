@@ -87,7 +87,7 @@ namespace SoftwareMercado
 
 
                     MDI.NomeUsuario = reader[1].ToString();
-                    MDI.caixa = reader[5].ToString();
+                    MDI.caixa = reader[2].ToString();
 
                     MDI FRM = new MDI();
                     FRM.Show();

@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            dataGridView1 = new DataGridView();
+            dataGridEstoque = new DataGridView();
             panel2 = new Panel();
             button2 = new Button();
             button1 = new Button();
             panel3 = new Panel();
+            panelFalta = new Panel();
+            panelDisp = new Panel();
+            panelProd = new Panel();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridEstoque).BeginInit();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -46,21 +49,21 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(219, 219, 219);
-            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(dataGridEstoque);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(822, 540);
             panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dataGridEstoque
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(80, 106);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(660, 418);
-            dataGridView1.TabIndex = 1;
+            dataGridEstoque.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridEstoque.Location = new Point(80, 106);
+            dataGridEstoque.Name = "dataGridEstoque";
+            dataGridEstoque.Size = new Size(660, 418);
+            dataGridEstoque.TabIndex = 1;
             // 
             // panel2
             // 
@@ -99,6 +102,9 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(217, 4, 61);
+            panel3.Controls.Add(panelFalta);
+            panel3.Controls.Add(panelDisp);
+            panel3.Controls.Add(panelProd);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(label2);
             panel3.Controls.Add(label1);
@@ -106,6 +112,30 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(492, 70);
             panel3.TabIndex = 0;
+            // 
+            // panelFalta
+            // 
+            panelFalta.BackColor = Color.FromArgb(242, 135, 5);
+            panelFalta.Location = new Point(361, 55);
+            panelFalta.Name = "panelFalta";
+            panelFalta.Size = new Size(83, 10);
+            panelFalta.TabIndex = 2;
+            // 
+            // panelDisp
+            // 
+            panelDisp.BackColor = Color.FromArgb(242, 135, 5);
+            panelDisp.Location = new Point(204, 55);
+            panelDisp.Name = "panelDisp";
+            panelDisp.Size = new Size(83, 10);
+            panelDisp.TabIndex = 2;
+            // 
+            // panelProd
+            // 
+            panelProd.BackColor = Color.FromArgb(242, 135, 5);
+            panelProd.Location = new Point(40, 55);
+            panelProd.Name = "panelProd";
+            panelProd.Size = new Size(83, 10);
+            panelProd.TabIndex = 2;
             // 
             // label3
             // 
@@ -116,6 +146,7 @@
             label3.Size = new Size(107, 32);
             label3.TabIndex = 0;
             label3.Text = "Em falta";
+            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -126,6 +157,7 @@
             label2.Size = new Size(135, 32);
             label2.TabIndex = 0;
             label2.Text = "Disponivel";
+            label2.Click += label2_Click;
             // 
             // label1
             // 
@@ -136,6 +168,7 @@
             label1.Size = new Size(119, 32);
             label1.TabIndex = 0;
             label1.Text = "Produtos";
+            label1.Click += label1_Click;
             // 
             // estoque
             // 
@@ -147,8 +180,9 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "estoque";
             Text = "estoque";
+            Load += estoque_Load;
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridEstoque).EndInit();
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
@@ -159,12 +193,15 @@
 
         private Panel panel1;
         private Panel panel2;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridEstoque;
         private Panel panel3;
         private Button button2;
         private Button button1;
         private Label label3;
         private Label label2;
         private Label label1;
+        private Panel panelFalta;
+        private Panel panelDisp;
+        private Panel panelProd;
     }
 }

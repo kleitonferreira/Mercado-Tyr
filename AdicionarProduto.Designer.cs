@@ -35,6 +35,8 @@
             label1 = new Label();
             QNTDprodutoTXT = new TextBox();
             NomeProdutoTXT = new TextBox();
+            label3 = new Label();
+            ValorTXT = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -44,8 +46,10 @@
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label2);
+            panel1.Controls.Add(label3);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(QNTDprodutoTXT);
+            panel1.Controls.Add(ValorTXT);
             panel1.Controls.Add(NomeProdutoTXT);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
@@ -106,6 +110,22 @@
             NomeProdutoTXT.Size = new Size(215, 23);
             NomeProdutoTXT.TabIndex = 0;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(33, 65);
+            label3.Name = "label3";
+            label3.Size = new Size(96, 15);
+            label3.TabIndex = 1;
+            label3.Text = "Valor do Produto";
+            // 
+            // ValorTXT
+            // 
+            ValorTXT.Location = new Point(33, 83);
+            ValorTXT.Name = "ValorTXT";
+            ValorTXT.Size = new Size(215, 23);
+            ValorTXT.TabIndex = 0;
+            // 
             // AdicionarProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -117,6 +137,7 @@
             Name = "AdicionarProduto";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AdicionarProduto";
+            Load += AdicionarProduto_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -131,5 +152,7 @@
         private TextBox NomeProdutoTXT;
         private Button button1;
         private Button button2;
+        private Label label3;
+        private TextBox ValorTXT;
     }
 }
