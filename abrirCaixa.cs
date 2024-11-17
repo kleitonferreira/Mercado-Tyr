@@ -22,17 +22,21 @@ namespace SoftwareMercado
             this.Close();
         }
 
-       
+
         private void button1_Click(object sender, EventArgs e)
         {
 
             MDI.statusCaixa = "aberto";
-           
+
             this.Close();
 
-            
-     
+
+
         }
-        
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

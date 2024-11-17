@@ -45,6 +45,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(360, 237);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // button2
             // 
@@ -89,7 +90,6 @@
             Name = "abrirCaixa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "abrirCaixa";
-      
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
