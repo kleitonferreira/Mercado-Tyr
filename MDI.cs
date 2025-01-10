@@ -18,6 +18,7 @@ namespace SoftwareMercado
         public static string NomeUsuario;
         public static string caixa;
         public static string statusCaixa;
+        public static string tela;
 
 
         public MDI()
@@ -42,7 +43,7 @@ namespace SoftwareMercado
 
         }
 
-        private Form activeForm = null;
+        public Form activeForm = null;
         public void openChildForm(Form childForm)
 
         {
@@ -77,14 +78,29 @@ namespace SoftwareMercado
 
         }
 
+        public void ClicarBotao1()
+        {
+            button1.PerformClick(); 
+        }
+        public void ClicarBotao2()
+        {
+            button2.PerformClick();
+        }
+        public void ClicarBotao3()
+        {
+            button3.PerformClick();
+        }
+
         private void button1_Click(object sender, EventArgs e)
 
         {
 
             openChildForm(new novaCompra());
             telaLBL.Text = "Nova Compra";
+            MDI.tela = "Nova Compra";
             panelDIV.Visible = true;
             telaLBL.Visible = true;
+            
 
         }
 
@@ -93,6 +109,7 @@ namespace SoftwareMercado
 
             openChildForm(new estoque());
             telaLBL.Text = "Estoque";
+            MDI.tela = "Estoque";
             panelDIV.Visible = true;
             telaLBL.Visible = true;
 
@@ -102,7 +119,8 @@ namespace SoftwareMercado
         {
 
             openChildForm(new historico());
-            telaLBL.Text = "Hitorico de vendas";
+            telaLBL.Text = "Historico de vendas";
+            MDI.tela = "Historico de vendas";
             panelDIV.Visible = true;
             telaLBL.Visible = true;
 
@@ -115,7 +133,7 @@ namespace SoftwareMercado
             if (MDI.statusCaixa == "fechado")
             {
 
-                abrirCaixa FRM = new abrirCaixa();
+                abrirCaixa FRM = new abrirCaixa(this);
                 FRM.ShowDialog();
             }
             else {

@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             button2 = new Button();
             button1 = new Button();
             label1 = new Label();
+            timerReset = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,7 +47,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(360, 237);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+           
             // 
             // button2
             // 
@@ -90,6 +92,7 @@
             Name = "abrirCaixa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "abrirCaixa";
+            Load += abrirCaixa_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -101,5 +104,6 @@
         private Button button2;
         private Button button1;
         private Label label1;
+        private System.Windows.Forms.Timer timerReset;
     }
 }

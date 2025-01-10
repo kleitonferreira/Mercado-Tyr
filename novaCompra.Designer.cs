@@ -29,22 +29,27 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            dataGridProdutosVenda = new DataGridView();
             panel3 = new Panel();
-            label4 = new Label();
-            label6 = new Label();
-            label3 = new Label();
-            label2 = new Label();
+            quantidadeTXT = new TextBox();
+            CBOIDproduto = new ComboBox();
+            CBOproduto = new ComboBox();
+            ultimoProdutoLBL = new Label();
             button2 = new Button();
             button1 = new Button();
             panelCOR = new Panel();
             TextoCaixa = new Label();
             panel2 = new Panel();
             panel4 = new Panel();
+            totalQtdeLBL = new Label();
+            qtdeLBL = new Label();
+            precoLBL = new Label();
             button3 = new Button();
             TrocoLBL = new Label();
             PagamentoLBL = new Label();
             TotalCompraLBL = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridProdutosVenda).BeginInit();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -52,6 +57,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(219, 219, 219);
+            panel1.Controls.Add(dataGridProdutosVenda);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(12, 12);
@@ -60,13 +66,22 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
+            // dataGridProdutosVenda
+            // 
+            dataGridProdutosVenda.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridProdutosVenda.Dock = DockStyle.Fill;
+            dataGridProdutosVenda.Location = new Point(0, 87);
+            dataGridProdutosVenda.Name = "dataGridProdutosVenda";
+            dataGridProdutosVenda.Size = new Size(822, 366);
+            dataGridProdutosVenda.TabIndex = 2;
+            // 
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(label6);
-            panel3.Controls.Add(label3);
-            panel3.Controls.Add(label2);
+            panel3.Controls.Add(quantidadeTXT);
+            panel3.Controls.Add(CBOIDproduto);
+            panel3.Controls.Add(CBOproduto);
+            panel3.Controls.Add(ultimoProdutoLBL);
             panel3.Controls.Add(button2);
             panel3.Controls.Add(button1);
             panel3.Controls.Add(panelCOR);
@@ -77,64 +92,61 @@
             panel3.Size = new Size(822, 87);
             panel3.TabIndex = 1;
             // 
-            // label4
+            // quantidadeTXT
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(217, 4, 61);
-            label4.Location = new Point(560, 45);
-            label4.Name = "label4";
-            label4.Size = new Size(78, 32);
-            label4.TabIndex = 4;
-            label4.Text = "label2";
+            quantidadeTXT.Location = new Point(240, 45);
+            quantidadeTXT.Name = "quantidadeTXT";
+            quantidadeTXT.Size = new Size(111, 23);
+            quantidadeTXT.TabIndex = 6;
             // 
-            // label6
+            // CBOIDproduto
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(46, 59);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 15);
-            label6.TabIndex = 3;
-            label6.Text = "label1";
+            CBOIDproduto.FormattingEnabled = true;
+            CBOIDproduto.Location = new Point(197, 13);
+            CBOIDproduto.Name = "CBOIDproduto";
+            CBOIDproduto.Size = new Size(21, 23);
+            CBOIDproduto.TabIndex = 5;
+            CBOIDproduto.Visible = false;
             // 
-            // label3
+            // CBOproduto
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(303, 59);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 4;
-            label3.Text = "label2";
+            CBOproduto.FormattingEnabled = true;
+            CBOproduto.Location = new Point(46, 45);
+            CBOproduto.Name = "CBOproduto";
+            CBOproduto.Size = new Size(172, 23);
+            CBOproduto.TabIndex = 5;
             // 
-            // label2
+            // ultimoProdutoLBL
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(168, 59);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 4;
-            label2.Text = "label2";
+            ultimoProdutoLBL.AutoSize = true;
+            ultimoProdutoLBL.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ultimoProdutoLBL.ForeColor = Color.FromArgb(217, 4, 61);
+            ultimoProdutoLBL.Location = new Point(629, 45);
+            ultimoProdutoLBL.Name = "ultimoProdutoLBL";
+            ultimoProdutoLBL.Size = new Size(78, 32);
+            ultimoProdutoLBL.TabIndex = 4;
+            ultimoProdutoLBL.Text = "label2";
             // 
             // button2
             // 
             button2.BackColor = Color.FromArgb(242, 135, 5);
-            button2.Location = new Point(560, 7);
+            button2.Location = new Point(629, 7);
             button2.Name = "button2";
             button2.Size = new Size(124, 32);
             button2.TabIndex = 2;
-            button2.Text = "Iniciar compra";
+            button2.Text = "Iniciar venda";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(242, 135, 5);
-            button1.Location = new Point(687, 7);
+            button1.Location = new Point(364, 45);
             button1.Margin = new Padding(0);
             button1.Name = "button1";
-            button1.Size = new Size(124, 32);
+            button1.Size = new Size(23, 23);
             button1.TabIndex = 2;
-            button1.Text = "Adicionar Produto";
+            button1.Text = "+";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -160,6 +172,9 @@
             // 
             panel2.BackColor = Color.White;
             panel2.Controls.Add(panel4);
+            panel2.Controls.Add(totalQtdeLBL);
+            panel2.Controls.Add(qtdeLBL);
+            panel2.Controls.Add(precoLBL);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(TrocoLBL);
             panel2.Controls.Add(PagamentoLBL);
@@ -173,16 +188,43 @@
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(242, 135, 5);
-            panel4.Location = new Point(186, 15);
+            panel4.Location = new Point(481, 15);
             panel4.Name = "panel4";
             panel4.Size = new Size(10, 56);
             panel4.TabIndex = 4;
+            // 
+            // totalQtdeLBL
+            // 
+            totalQtdeLBL.AutoSize = true;
+            totalQtdeLBL.Location = new Point(278, 37);
+            totalQtdeLBL.Name = "totalQtdeLBL";
+            totalQtdeLBL.Size = new Size(38, 15);
+            totalQtdeLBL.TabIndex = 4;
+            totalQtdeLBL.Text = "label2";
+            // 
+            // qtdeLBL
+            // 
+            qtdeLBL.AutoSize = true;
+            qtdeLBL.Location = new Point(46, 37);
+            qtdeLBL.Name = "qtdeLBL";
+            qtdeLBL.Size = new Size(38, 15);
+            qtdeLBL.TabIndex = 3;
+            qtdeLBL.Text = "label1";
+            // 
+            // precoLBL
+            // 
+            precoLBL.AutoSize = true;
+            precoLBL.Location = new Point(160, 37);
+            precoLBL.Name = "precoLBL";
+            precoLBL.Size = new Size(38, 15);
+            precoLBL.TabIndex = 4;
+            precoLBL.Text = "label2";
             // 
             // button3
             // 
             button3.BackColor = Color.FromArgb(217, 4, 61);
             button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(676, 15);
+            button3.Location = new Point(629, 15);
             button3.Name = "button3";
             button3.Size = new Size(135, 56);
             button3.TabIndex = 2;
@@ -193,7 +235,7 @@
             // 
             TrocoLBL.AutoSize = true;
             TrocoLBL.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TrocoLBL.Location = new Point(303, 41);
+            TrocoLBL.Location = new Point(497, 45);
             TrocoLBL.Name = "TrocoLBL";
             TrocoLBL.Size = new Size(68, 30);
             TrocoLBL.TabIndex = 3;
@@ -203,7 +245,7 @@
             // 
             PagamentoLBL.AutoSize = true;
             PagamentoLBL.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PagamentoLBL.Location = new Point(303, 15);
+            PagamentoLBL.Location = new Point(497, 15);
             PagamentoLBL.Name = "PagamentoLBL";
             PagamentoLBL.Size = new Size(68, 30);
             PagamentoLBL.TabIndex = 3;
@@ -213,7 +255,7 @@
             // 
             TotalCompraLBL.AutoSize = true;
             TotalCompraLBL.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TotalCompraLBL.Location = new Point(46, 25);
+            TotalCompraLBL.Location = new Point(375, 25);
             TotalCompraLBL.Name = "TotalCompraLBL";
             TotalCompraLBL.Size = new Size(68, 30);
             TotalCompraLBL.TabIndex = 3;
@@ -231,6 +273,7 @@
             Text = "novaCompra";
             Load += novaCompra_Load;
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridProdutosVenda).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel2.ResumeLayout(false);
@@ -247,14 +290,18 @@
         private Label TextoCaixa;
         private Button button1;
         private Button button2;
-        private Label label2;
+        private Label precoLBL;
         private Label TotalCompraLBL;
         private Button button3;
-        private Label label4;
-        private Label label6;
-        private Label label3;
+        private Label ultimoProdutoLBL;
+        private Label qtdeLBL;
+        private Label totalQtdeLBL;
         private Panel panel4;
         private Label PagamentoLBL;
         private Label TrocoLBL;
+        private DataGridView dataGridProdutosVenda;
+        private TextBox quantidadeTXT;
+        private ComboBox CBOIDproduto;
+        private ComboBox CBOproduto;
     }
 }
