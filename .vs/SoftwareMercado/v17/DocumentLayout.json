@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\abrircaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:abrircaixa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\mdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:mdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\novacompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:novacompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\novacompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:novacompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\mdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:mdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MDI.cs",
               "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\MDI.cs",
               "RelativeDocumentMoniker": "MDI.cs",
               "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\MDI.cs",
               "RelativeToolTip": "MDI.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAApwHoAAAArAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAYwCkAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T19:23:31.053Z",
               "IsPinned": true,
@@ -44,45 +44,49 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "abrirCaixa.cs",
-              "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\abrirCaixa.cs",
-              "RelativeDocumentMoniker": "abrirCaixa.cs",
-              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\abrirCaixa.cs",
-              "RelativeToolTip": "abrirCaixa.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAAwD4AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T21:34:18.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "novaCompra.cs",
-              "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\novaCompra.cs",
-              "RelativeDocumentMoniker": "novaCompra.cs",
-              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\novaCompra.cs",
-              "RelativeToolTip": "novaCompra.cs",
-              "ViewState": "AQIAAHgAAAAAAAAAAAAAAEYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T01:34:28.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "novaCompra.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\novaCompra.cs",
               "RelativeDocumentMoniker": "novaCompra.cs",
               "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\novaCompra.cs [Projeto]",
               "RelativeToolTip": "novaCompra.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T01:11:43.674Z",
+              "WhenOpened": "2025-01-11T23:17:59.877Z",
               "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "estoque.cs",
+              "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\estoque.cs",
+              "RelativeDocumentMoniker": "estoque.cs",
+              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\estoque.cs",
+              "RelativeToolTip": "estoque.cs",
+              "ViewState": "AQIAAJcAAAAAAAAAAAAYwLUAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T23:09:24.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "novaCompra.cs",
+              "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\novaCompra.cs",
+              "RelativeDocumentMoniker": "novaCompra.cs",
+              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\novaCompra.cs",
+              "RelativeToolTip": "novaCompra.cs",
+              "ViewState": "AQIAAPQAAAAAAAAAAAAwwDQBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T23:07:48.236Z",
+              "EditorCaption": ""
             }
           ]
         }

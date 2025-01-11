@@ -21,8 +21,8 @@ namespace SoftwareMercado
         private void button2_Click(object sender, EventArgs e)
         {
 
-            AdicionarProduto FRM = new AdicionarProduto();
-            FRM.ShowDialog();
+            //AdicionarProduto FRM = new AdicionarProduto();
+            //FRM.ShowDialog();
 
         }
 
@@ -195,5 +195,9 @@ namespace SoftwareMercado
             }
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

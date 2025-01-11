@@ -80,7 +80,7 @@ namespace SoftwareMercado
 
         public void ClicarBotao1()
         {
-            button1.PerformClick(); 
+            button1.PerformClick();
         }
         public void ClicarBotao2()
         {
@@ -100,7 +100,7 @@ namespace SoftwareMercado
             MDI.tela = "Nova Compra";
             panelDIV.Visible = true;
             telaLBL.Visible = true;
-            
+
 
         }
 
@@ -136,11 +136,20 @@ namespace SoftwareMercado
                 abrirCaixa FRM = new abrirCaixa(this);
                 FRM.ShowDialog();
             }
-            else {
+            else
+            {
 
                 MessageBox.Show("O caixa ja esta aberto!");
-            
+
             }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            FecharCaixa FRM = new FecharCaixa(this);
+            FRM.ShowDialog();
 
         }
     }

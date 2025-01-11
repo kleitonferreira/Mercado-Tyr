@@ -4,13 +4,13 @@
     <Compile Update="abrirCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="AdicionarProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="estoque.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ExcluirProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FecharCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="historico.cs">

@@ -39,7 +39,7 @@ namespace SoftwareMercado
                 CBOproduto.Visible = false;
                 quantidadeTXT.Visible = false;
                 button1.Visible = false;
-               
+
 
             }
             else
@@ -58,10 +58,10 @@ namespace SoftwareMercado
             PagamentoLBL.Visible = false;
             TrocoLBL.Visible = false;
             panel4.Visible = false;
-           
-            
 
-      
+
+
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -71,7 +71,7 @@ namespace SoftwareMercado
 
         }
 
-        private void carregarComboProdutos() 
+        private void carregarComboProdutos()
         {
 
             string sql = "select ID_Produto, Nome_Produto from produto";
@@ -139,15 +139,140 @@ namespace SoftwareMercado
 
         string strConexao = MDI.strConexao;
 
+        private void carregarDatagrid()
+        {
+
+            string sql = "select id_venda_item as 'venda',id_produto_item as 'produto',quantidade_produto_item as 'quantidade' from itens_venda where id_venda_item = " +
+                "'" + novaCompra.venda + "'";
+
+            MySqlConnection conexao = new MySqlConnection(strConexao);
+            MySqlDataAdapter ad = new MySqlDataAdapter(sql, conexao);
+            DataSet ds = new DataSet();
+            conexao.Open();
+
+            try
+            {
+
+                ad.Fill(ds);
+
+                dataGridProdutosVenda.DataSource = ds.Tables[0];
+                dataGridProdutosVenda.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                dataGridProdutosVenda.AutoResizeRow(0, DataGridViewAutoSizeRowMode.AllCellsExceptHeader);
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Erro: " + ex);
+
+
+            }
+            finally
+            {
+
+                conexao.Close();
+
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            if (novaCompra.venda == "" && MDI.statusCaixa == "aberto")
+            {
+
+                string sql = "insert into venda" +
+                    "(status_venda)" +
+                    "values" +
+                    "('Iniciada')";
+
+
+                MySqlConnection conexao = new MySqlConnection(strConexao);
+                MySqlCommand cmd = new MySqlCommand(sql, conexao);
+                cmd.CommandType = CommandType.Text;
+                conexao.Open();
+
+
+                try
+                {
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    //reader = cmd.ExecuteReader();
+
+
+                    if (rowsAffected > 0)
+                    {
+
+                        MessageBox.Show("Criou venda");
+                        string id = "select LAST_INSERT_ID()";
+
+                        MySqlConnection con = new MySqlConnection(strConexao);
+                        MySqlCommand comand = new MySqlCommand(id, conexao);
+                        cmd.CommandType = CommandType.Text;
+                        MySqlDataReader reader;
+
+                        try
+                        {
+
+                            reader = comand.ExecuteReader();
+                            if (reader.Read())
+                            {
+
+                                novaCompra.venda = reader[0].ToString();
+                                MessageBox.Show(novaCompra.venda);
+
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("erro: " + ex.ToString);
+
+                        }
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Erro: " + ex.ToString());
+
+
+                }
+                finally
+                {
+
+                    conexao.Close();
+
+                }
+
+            }
+            else
+            {
+                if (novaCompra.venda != "")
+                    MessageBox.Show("venda ja iniciada");
+                else
+                    MessageBox.Show("Caixa fechado");
+
+            }
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if(novaCompra.venda == "")
+            if (novaCompra.venda == "")
             {
 
                 MessageBox.Show("Nenhuma venda iniciada");
 
-            }else
+            }
+            else
             {
 
                 string quantidade = quantidadeTXT.Text;
@@ -180,12 +305,7 @@ namespace SoftwareMercado
                             CBOproduto.Text = "";
                             quantidadeTXT.Text = "";
 
-
-                            string venda = "select * from venda" +
-                                 "INNER JOIN itens_venda where venda.id_venda = '" + novaCompra.venda + "'";
-
-                         
-
+                            carregarDatagrid();
 
                         }
 
@@ -215,89 +335,10 @@ namespace SoftwareMercado
             }
 
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            if(novaCompra.venda == "" && MDI.statusCaixa == "aberto")
-            {
-
-                string sql = "insert into venda" +
-                    "(status_venda)" +
-                    "values" +
-                    "('Iniciada')";
-
-
-                MySqlConnection conexao = new MySqlConnection(strConexao);
-                MySqlCommand cmd = new MySqlCommand(sql, conexao);
-                cmd.CommandType = CommandType.Text;
-                conexao.Open();
-                
-
-                try
-                {
-
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    //reader = cmd.ExecuteReader();
-                   
-
-                    if (rowsAffected > 0)
-                    {
-
-                        MessageBox.Show("Criou venda");
-                        string id = "select LAST_INSERT_ID()";
-
-                        MySqlConnection con = new MySqlConnection(strConexao);
-                        MySqlCommand comand = new MySqlCommand(id, conexao);
-                        cmd.CommandType = CommandType.Text;
-                        MySqlDataReader reader;
-
-                        try
-                        {
-
-                            reader = comand.ExecuteReader();
-                            if (reader.Read())
-                            {
-
-                                novaCompra.venda = reader[0].ToString();
-                                MessageBox.Show(novaCompra.venda);
-
-                            }
-
-                        }
-                        catch (Exception ex)
-                        {
-    
-                            MessageBox.Show("erro: " + ex.ToString);
-
-                        }
-
-                    }
-                    
-                }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show("Erro: " + ex.ToString());
-
-
-                }
-                finally
-                {
-
-                    conexao.Close();
-
-                }
-
-            }else
-            {
-                if (novaCompra.venda != "")
-                    MessageBox.Show("venda ja iniciada");
-                else
-                    MessageBox.Show("Caixa fechado");
-                
-            }
-
-        }
     }
+
+    
+
 }
+
+     
