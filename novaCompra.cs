@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,15 +53,14 @@ namespace SoftwareMercado
 
             qtdeLBL.Visible = false;
             precoLBL.Visible = false;
-            totalQtdeLBL.Visible = false;
+            
             ultimoProdutoLBL.Visible = false;
             TotalCompraLBL.Visible = false;
             PagamentoLBL.Visible = false;
             TrocoLBL.Visible = false;
             panel4.Visible = false;
 
-
-
+            
 
         }
 
@@ -142,8 +142,12 @@ namespace SoftwareMercado
         private void carregarDatagrid()
         {
 
-            string sql = "select id_venda_item as 'venda',id_produto_item as 'produto',quantidade_produto_item as 'quantidade' from itens_venda where id_venda_item = " +
-                "'" + novaCompra.venda + "'";
+            string sql = "SELECT itens_venda.id_venda_item AS 'venda', " +
+             "itens_venda.quantidade_produto_item AS 'quantidade', " +
+             "produto.Nome_Produto AS 'produto' " +
+             "FROM itens_venda " +
+             "INNER JOIN produto ON itens_venda.id_produto_item = produto.ID_Produto " +
+             "WHERE id_venda_item = '" + novaCompra.venda + "'";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
             MySqlDataAdapter ad = new MySqlDataAdapter(sql, conexao);
@@ -183,6 +187,8 @@ namespace SoftwareMercado
 
             if (novaCompra.venda == "" && MDI.statusCaixa == "aberto")
             {
+
+                carregarComboProdutos();
 
                 string sql = "insert into venda" +
                     "(status_venda)" +
@@ -278,7 +284,8 @@ namespace SoftwareMercado
                 string quantidade = quantidadeTXT.Text;
                 bool qtdeEhNumero = int.TryParse(quantidade, out int resultado);
 
-                carregarComboProdutos();
+                int total;
+                int cont;
 
 
                 if (qtdeEhNumero == true)
@@ -296,16 +303,42 @@ namespace SoftwareMercado
 
                     try
                     {
+                       
+                 
 
                         int RowsAffected = cmd.ExecuteNonQuery();
 
                         if (RowsAffected > 0)
                         {
 
-                            CBOproduto.Text = "";
+                            
                             quantidadeTXT.Text = "";
 
                             carregarDatagrid();
+
+                            string sql2 = "select * from produto where ID_produto = '"+CBOIDproduto.Text+"'";
+
+                            
+                            MySqlCommand cmd2 = new MySqlCommand(sql2, conexao);
+                            cmd2.CommandType = CommandType.Text;
+                            MySqlDataReader reader;
+
+                            reader = cmd2.ExecuteReader();
+
+                            if (reader.Read()) 
+                            {
+                                ultimoProdutoLBL.Text = reader[1].ToString();
+                                qtdeLBL.Text = quantidadeTXT.Text;
+                                precoLBL.Text = (decimal.Parse(reader[3].ToString())).ToString("C");
+
+                                ultimoProdutoLBL.Visible = true;
+                                qtdeLBL.Visible = true;
+                                precoLBL.Visible = true;
+
+
+
+                            }
+
 
                         }
 

@@ -41,7 +41,6 @@
             TextoCaixa = new Label();
             panel2 = new Panel();
             panel4 = new Panel();
-            totalQtdeLBL = new Label();
             qtdeLBL = new Label();
             precoLBL = new Label();
             button3 = new Button();
@@ -172,7 +171,6 @@
             // 
             panel2.BackColor = Color.White;
             panel2.Controls.Add(panel4);
-            panel2.Controls.Add(totalQtdeLBL);
             panel2.Controls.Add(qtdeLBL);
             panel2.Controls.Add(precoLBL);
             panel2.Controls.Add(button3);
@@ -193,19 +191,10 @@
             panel4.Size = new Size(10, 56);
             panel4.TabIndex = 4;
             // 
-            // totalQtdeLBL
-            // 
-            totalQtdeLBL.AutoSize = true;
-            totalQtdeLBL.Location = new Point(278, 37);
-            totalQtdeLBL.Name = "totalQtdeLBL";
-            totalQtdeLBL.Size = new Size(38, 15);
-            totalQtdeLBL.TabIndex = 4;
-            totalQtdeLBL.Text = "label2";
-            // 
             // qtdeLBL
             // 
             qtdeLBL.AutoSize = true;
-            qtdeLBL.Location = new Point(46, 37);
+            qtdeLBL.Location = new Point(142, 37);
             qtdeLBL.Name = "qtdeLBL";
             qtdeLBL.Size = new Size(38, 15);
             qtdeLBL.TabIndex = 3;
@@ -214,7 +203,7 @@
             // precoLBL
             // 
             precoLBL.AutoSize = true;
-            precoLBL.Location = new Point(160, 37);
+            precoLBL.Location = new Point(249, 37);
             precoLBL.Name = "precoLBL";
             precoLBL.Size = new Size(38, 15);
             precoLBL.TabIndex = 4;
@@ -295,7 +284,6 @@
         private Button button3;
         private Label ultimoProdutoLBL;
         private Label qtdeLBL;
-        private Label totalQtdeLBL;
         private Panel panel4;
         private Label PagamentoLBL;
         private Label TrocoLBL;
