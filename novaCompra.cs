@@ -144,7 +144,8 @@ namespace SoftwareMercado
 
             string sql = "SELECT itens_venda.id_venda_item AS 'venda', " +
              "itens_venda.quantidade_produto_item AS 'quantidade', " +
-             "produto.Nome_Produto AS 'produto' " +
+             "produto.Nome_Produto AS 'produto' ," +
+             "produto.valor_produto AS 'valor' " +
              "FROM itens_venda " +
              "INNER JOIN produto ON itens_venda.id_produto_item = produto.ID_Produto " +
              "WHERE id_venda_item = '" + novaCompra.venda + "'";
@@ -284,8 +285,8 @@ namespace SoftwareMercado
                 string quantidade = quantidadeTXT.Text;
                 bool qtdeEhNumero = int.TryParse(quantidade, out int resultado);
 
-                int total;
-                int cont;
+                
+               
 
 
                 if (qtdeEhNumero == true)
@@ -311,9 +312,7 @@ namespace SoftwareMercado
                         if (RowsAffected > 0)
                         {
 
-                            
-                            quantidadeTXT.Text = "";
-
+                     
                             carregarDatagrid();
 
                             string sql2 = "select * from produto where ID_produto = '"+CBOIDproduto.Text+"'";
@@ -328,17 +327,26 @@ namespace SoftwareMercado
                             if (reader.Read()) 
                             {
                                 ultimoProdutoLBL.Text = reader[1].ToString();
-                                qtdeLBL.Text = quantidadeTXT.Text;
-                                precoLBL.Text = (decimal.Parse(reader[3].ToString())).ToString("C");
+                                qtdeLBL.Text = quantidade;
+                                precoLBL.Text = (decimal.Parse(reader[3].ToString())).ToString();
+                                int preco;
+                                int totalCompra;
+
+                                if (Int32.TryParse(precoLBL.Text, out preco))
+                                {
+                                    
+                                    totalCompra = preco * resultado;
+                                    TotalCompraLBL.Text = totalCompra.ToString("C");
+                                    qtdeLBL.Text = "";
+
+                                }
 
                                 ultimoProdutoLBL.Visible = true;
                                 qtdeLBL.Visible = true;
                                 precoLBL.Visible = true;
-
-
+                                TotalCompraLBL.Visible = true;
 
                             }
-
 
                         }
 
