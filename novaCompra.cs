@@ -270,6 +270,8 @@ namespace SoftwareMercado
 
         }
 
+        int cont = 0;
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -284,11 +286,7 @@ namespace SoftwareMercado
 
                 string quantidade = quantidadeTXT.Text;
                 bool qtdeEhNumero = int.TryParse(quantidade, out int resultado);
-
                 
-               
-
-
                 if (qtdeEhNumero == true)
                 {
 
@@ -305,14 +303,11 @@ namespace SoftwareMercado
                     try
                     {
                        
-                 
-
                         int RowsAffected = cmd.ExecuteNonQuery();
 
                         if (RowsAffected > 0)
                         {
 
-                     
                             carregarDatagrid();
 
                             string sql2 = "select * from produto where ID_produto = '"+CBOIDproduto.Text+"'";
@@ -327,29 +322,32 @@ namespace SoftwareMercado
                             if (reader.Read()) 
                             {
                                 ultimoProdutoLBL.Text = reader[1].ToString();
-                                qtdeLBL.Text = quantidade;
+                                qtdeLBL.Text = quantidade + " x";
                                 precoLBL.Text = (decimal.Parse(reader[3].ToString())).ToString();
                                 int preco;
                                 int totalCompra;
+                                
 
                                 if (Int32.TryParse(precoLBL.Text, out preco))
                                 {
                                     
                                     totalCompra = preco * resultado;
+                                    totalCompra = totalCompra + cont;
                                     TotalCompraLBL.Text = totalCompra.ToString("C");
-                                    qtdeLBL.Text = "";
+                                    cont = totalCompra;
+                                    quantidadeTXT.Text = "";
 
                                 }
 
                                 ultimoProdutoLBL.Visible = true;
                                 qtdeLBL.Visible = true;
+                                precoLBL.Text = preco.ToString("C");
                                 precoLBL.Visible = true;
                                 TotalCompraLBL.Visible = true;
 
                             }
 
                         }
-
 
                     }
                     catch (Exception ex)
