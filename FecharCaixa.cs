@@ -57,5 +57,20 @@ namespace SoftwareMercado
             this.Close();
 
         }
+
+        private void FecharCaixa_Load(object sender, EventArgs e)
+
+        {
+
+            if (MDI.statusCaixa == "fechado")
+            {
+
+                MessageBox.Show("O caixa ja esta fechado");
+                this.Close();
+
+
+            }
+
+        }
     }
 }

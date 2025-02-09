@@ -13,6 +13,9 @@
     <Compile Update="FecharCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="historico.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -43,6 +43,7 @@
             panel4 = new Panel();
             qtdeLBL = new Label();
             precoLBL = new Label();
+            button4 = new Button();
             button3 = new Button();
             TrocoLBL = new Label();
             PagamentoLBL = new Label();
@@ -93,9 +94,9 @@
             // 
             // quantidadeTXT
             // 
-            quantidadeTXT.Location = new Point(240, 45);
+            quantidadeTXT.Location = new Point(224, 45);
             quantidadeTXT.Name = "quantidadeTXT";
-            quantidadeTXT.Size = new Size(111, 23);
+            quantidadeTXT.Size = new Size(47, 23);
             quantidadeTXT.TabIndex = 6;
             // 
             // CBOIDproduto
@@ -120,7 +121,7 @@
             ultimoProdutoLBL.AutoSize = true;
             ultimoProdutoLBL.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ultimoProdutoLBL.ForeColor = Color.FromArgb(217, 4, 61);
-            ultimoProdutoLBL.Location = new Point(629, 45);
+            ultimoProdutoLBL.Location = new Point(577, 45);
             ultimoProdutoLBL.Name = "ultimoProdutoLBL";
             ultimoProdutoLBL.Size = new Size(78, 32);
             ultimoProdutoLBL.TabIndex = 4;
@@ -129,7 +130,7 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(242, 135, 5);
-            button2.Location = new Point(629, 7);
+            button2.Location = new Point(577, 7);
             button2.Name = "button2";
             button2.Size = new Size(124, 32);
             button2.TabIndex = 2;
@@ -140,7 +141,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(242, 135, 5);
-            button1.Location = new Point(364, 45);
+            button1.Location = new Point(274, 45);
             button1.Margin = new Padding(0);
             button1.Name = "button1";
             button1.Size = new Size(23, 23);
@@ -173,6 +174,7 @@
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(qtdeLBL);
             panel2.Controls.Add(precoLBL);
+            panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(TrocoLBL);
             panel2.Controls.Add(PagamentoLBL);
@@ -209,16 +211,28 @@
             precoLBL.TabIndex = 4;
             precoLBL.Text = "label2";
             // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(217, 4, 61);
+            button4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.Location = new Point(707, 20);
+            button4.Name = "button4";
+            button4.Size = new Size(102, 46);
+            button4.TabIndex = 2;
+            button4.Text = "Finalizar compra";
+            button4.UseVisualStyleBackColor = false;
+            // 
             // button3
             // 
             button3.BackColor = Color.FromArgb(217, 4, 61);
             button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(629, 15);
+            button3.Location = new Point(599, 20);
             button3.Name = "button3";
-            button3.Size = new Size(135, 56);
+            button3.Size = new Size(102, 46);
             button3.TabIndex = 2;
-            button3.Text = "Finalizar compra";
+            button3.Text = "Realizar pagamento";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // TrocoLBL
             // 
@@ -291,5 +305,6 @@
         private TextBox quantidadeTXT;
         private ComboBox CBOIDproduto;
         private ComboBox CBOproduto;
+        private Button button4;
     }
 }

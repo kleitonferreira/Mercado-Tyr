@@ -53,14 +53,14 @@ namespace SoftwareMercado
 
             qtdeLBL.Visible = false;
             precoLBL.Visible = false;
-            
+
             ultimoProdutoLBL.Visible = false;
             TotalCompraLBL.Visible = false;
             PagamentoLBL.Visible = false;
             TrocoLBL.Visible = false;
             panel4.Visible = false;
 
-            
+
 
         }
 
@@ -286,7 +286,7 @@ namespace SoftwareMercado
 
                 string quantidade = quantidadeTXT.Text;
                 bool qtdeEhNumero = int.TryParse(quantidade, out int resultado);
-                
+
                 if (qtdeEhNumero == true)
                 {
 
@@ -302,7 +302,7 @@ namespace SoftwareMercado
 
                     try
                     {
-                       
+
                         int RowsAffected = cmd.ExecuteNonQuery();
 
                         if (RowsAffected > 0)
@@ -310,27 +310,27 @@ namespace SoftwareMercado
 
                             carregarDatagrid();
 
-                            string sql2 = "select * from produto where ID_produto = '"+CBOIDproduto.Text+"'";
+                            string sql2 = "select * from produto where ID_produto = '" + CBOIDproduto.Text + "'";
 
-                            
+
                             MySqlCommand cmd2 = new MySqlCommand(sql2, conexao);
                             cmd2.CommandType = CommandType.Text;
                             MySqlDataReader reader;
 
                             reader = cmd2.ExecuteReader();
 
-                            if (reader.Read()) 
+                            if (reader.Read())
                             {
                                 ultimoProdutoLBL.Text = reader[1].ToString();
                                 qtdeLBL.Text = quantidade + " x";
                                 precoLBL.Text = (decimal.Parse(reader[3].ToString())).ToString();
                                 int preco;
                                 int totalCompra;
-                                
+
 
                                 if (Int32.TryParse(precoLBL.Text, out preco))
                                 {
-                                    
+
                                     totalCompra = preco * resultado;
                                     totalCompra = totalCompra + cont;
                                     TotalCompraLBL.Text = totalCompra.ToString("C");
@@ -374,9 +374,18 @@ namespace SoftwareMercado
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+
+        {
+
+            FormaPagamento FRM = new FormaPagamento();
+            FRM.ShowDialog();
+
+        }
     }
 
-    
+
 
 }
 
