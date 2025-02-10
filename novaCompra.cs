@@ -16,7 +16,9 @@ namespace SoftwareMercado
     public partial class novaCompra : Form
     {
 
-        public static string venda = "";
+        public static string venda;
+        public static string pagamento;
+        public static string troco;
 
         public novaCompra()
         {
@@ -26,7 +28,25 @@ namespace SoftwareMercado
 
 
 
+        public void LabelPagamento()
+        {
 
+
+            PagamentoLBL.Text = novaCompra.pagamento;
+            
+            PagamentoLBL.Visible = true;
+            panel4.Visible = true;
+
+
+        }
+
+        public void LabelTroco()
+        {
+
+            TrocoLBL.Text = novaCompra.troco;
+            TrocoLBL.Visible = true;
+
+        }
 
         public void novaCompra_Load(object sender, EventArgs e)
 
@@ -59,8 +79,14 @@ namespace SoftwareMercado
             PagamentoLBL.Visible = false;
             TrocoLBL.Visible = false;
             panel4.Visible = false;
+            PagamentoLBL.Text = novaCompra.pagamento;
 
+            if(PagamentoLBL.Text == "")
+            {
 
+                PagamentoLBL.Visible = true;
+
+            }
 
         }
 
@@ -71,7 +97,7 @@ namespace SoftwareMercado
 
         }
 
-        private void carregarComboProdutos()
+        public void carregarComboProdutos()
         {
 
             string sql = "select ID_Produto, Nome_Produto from produto";
@@ -334,6 +360,7 @@ namespace SoftwareMercado
                                     totalCompra = preco * resultado;
                                     totalCompra = totalCompra + cont;
                                     TotalCompraLBL.Text = totalCompra.ToString("C");
+                                    novaCompra.troco = totalCompra.ToString("C");
                                     cont = totalCompra;
                                     quantidadeTXT.Text = "";
 
@@ -344,6 +371,7 @@ namespace SoftwareMercado
                                 precoLBL.Text = preco.ToString("C");
                                 precoLBL.Visible = true;
                                 TotalCompraLBL.Visible = true;
+                                
 
                             }
 
@@ -379,8 +407,28 @@ namespace SoftwareMercado
 
         {
 
-            FormaPagamento FRM = new FormaPagamento();
+            FormaPagamento FRM = new FormaPagamento(this);
             FRM.ShowDialog();
+
+        }
+
+        private void PagamentoLBL_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void novaCompra_Enter(object sender, EventArgs e)
+        {
+
+            
 
         }
     }

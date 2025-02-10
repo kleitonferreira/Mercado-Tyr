@@ -184,6 +184,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(822, 87);
             panel2.TabIndex = 0;
+            panel2.Paint += panel2_Paint;
             // 
             // panel4
             // 
@@ -240,9 +241,8 @@
             TrocoLBL.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TrocoLBL.Location = new Point(497, 45);
             TrocoLBL.Name = "TrocoLBL";
-            TrocoLBL.Size = new Size(68, 30);
+            TrocoLBL.Size = new Size(0, 30);
             TrocoLBL.TabIndex = 3;
-            TrocoLBL.Text = "label1";
             // 
             // PagamentoLBL
             // 
@@ -250,9 +250,9 @@
             PagamentoLBL.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PagamentoLBL.Location = new Point(497, 15);
             PagamentoLBL.Name = "PagamentoLBL";
-            PagamentoLBL.Size = new Size(68, 30);
+            PagamentoLBL.Size = new Size(0, 30);
             PagamentoLBL.TabIndex = 3;
-            PagamentoLBL.Text = "label1";
+            PagamentoLBL.TextChanged += PagamentoLBL_TextChanged;
             // 
             // TotalCompraLBL
             // 
@@ -275,6 +275,7 @@
             Name = "novaCompra";
             Text = "novaCompra";
             Load += novaCompra_Load;
+            Enter += novaCompra_Enter;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridProdutosVenda).EndInit();
             panel3.ResumeLayout(false);

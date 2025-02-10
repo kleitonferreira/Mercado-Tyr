@@ -54,6 +54,7 @@ namespace SoftwareMercado
 
             }
 
+            novaCompra.venda = "";
             this.Close();
 
         }
