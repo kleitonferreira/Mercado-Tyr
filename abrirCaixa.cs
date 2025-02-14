@@ -43,6 +43,7 @@ namespace SoftwareMercado
         {
 
             MDI.statusCaixa = "aberto";
+            novaCompra.venda = "";
 
             if(MDI.tela == "Nova Compra")
             {

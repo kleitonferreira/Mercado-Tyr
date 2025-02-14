@@ -40,6 +40,7 @@
             panelCOR = new Panel();
             TextoCaixa = new Label();
             panel2 = new Panel();
+            LBLtr = new Label();
             panel4 = new Panel();
             qtdeLBL = new Label();
             precoLBL = new Label();
@@ -141,6 +142,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(242, 135, 5);
+            button1.ForeColor = SystemColors.ControlText;
             button1.Location = new Point(274, 45);
             button1.Margin = new Padding(0);
             button1.Name = "button1";
@@ -171,6 +173,7 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(LBLtr);
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(qtdeLBL);
             panel2.Controls.Add(precoLBL);
@@ -185,6 +188,15 @@
             panel2.Size = new Size(822, 87);
             panel2.TabIndex = 0;
             panel2.Paint += panel2_Paint;
+            // 
+            // LBLtr
+            // 
+            LBLtr.AutoSize = true;
+            LBLtr.Location = new Point(497, 42);
+            LBLtr.Name = "LBLtr";
+            LBLtr.Size = new Size(39, 15);
+            LBLtr.TabIndex = 5;
+            LBLtr.Text = "Troco:";
             // 
             // panel4
             // 
@@ -222,6 +234,7 @@
             button4.TabIndex = 2;
             button4.Text = "Finalizar compra";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -239,20 +252,23 @@
             // 
             TrocoLBL.AutoSize = true;
             TrocoLBL.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TrocoLBL.Location = new Point(497, 45);
+            TrocoLBL.Location = new Point(497, 57);
             TrocoLBL.Name = "TrocoLBL";
-            TrocoLBL.Size = new Size(0, 30);
+            TrocoLBL.Size = new Size(18, 30);
             TrocoLBL.TabIndex = 3;
+            TrocoLBL.Text = ".";
             // 
             // PagamentoLBL
             // 
             PagamentoLBL.AutoSize = true;
             PagamentoLBL.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PagamentoLBL.Location = new Point(497, 15);
+            PagamentoLBL.Location = new Point(497, 0);
             PagamentoLBL.Name = "PagamentoLBL";
-            PagamentoLBL.Size = new Size(0, 30);
+            PagamentoLBL.Size = new Size(18, 30);
             PagamentoLBL.TabIndex = 3;
+            PagamentoLBL.Text = ".";
             PagamentoLBL.TextChanged += PagamentoLBL_TextChanged;
+            PagamentoLBL.Click += PagamentoLBL_Click;
             // 
             // TotalCompraLBL
             // 
@@ -307,5 +323,6 @@
         private ComboBox CBOIDproduto;
         private ComboBox CBOproduto;
         private Button button4;
+        private Label LBLtr;
     }
 }

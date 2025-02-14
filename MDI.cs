@@ -95,7 +95,7 @@ namespace SoftwareMercado
 
         {
 
-            openChildForm(new novaCompra());
+            openChildForm(new novaCompra(this));
             telaLBL.Text = "Nova Compra";
             MDI.tela = "Nova Compra";
             panelDIV.Visible = true;

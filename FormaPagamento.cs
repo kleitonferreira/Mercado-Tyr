@@ -65,34 +65,28 @@ namespace SoftwareMercado
             int valor;
             int pagou;
             int resultado;
-
+            
 
             novaCompra.pagamento = pagamentoCBO.Text;
+           
+
             if (pagamentoCBO.SelectedItem == "Dinheiro")
             {
 
-                MessageBox.Show(novaCompra.troco);
 
-                if (Int32.TryParse(novaCompra.troco, out valor)){
+                Int32.TryParse(novaCompra.troco, out valor);
+                Int32.TryParse(trocoTXT.Text, out pagou);
 
-                    // não esta entrando em nenhum desses ifs 
+                MessageBox.Show(novaCompra.troco + "");
+                MessageBox.Show(pagou + "");
 
-                    if (Int32.TryParse(trocoTXT.Text, out pagou))
-                    {
 
-                        resultado = valor - pagou;
-
-                        MessageBox.Show(resultado.ToString("C"));
-
-                        novaCompra.troco = resultado.ToString("C");
-                        _funcao.LabelTroco();
-
-                    }
-
+                resultado = pagou - valor;
                 
-                }
+                novaCompra.troco = resultado.ToString("C");
+                _funcao.LabelTroco();
 
-
+                    
             }
 
             MessageBox.Show(novaCompra.pagamento);

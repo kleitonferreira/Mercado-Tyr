@@ -20,9 +20,13 @@ namespace SoftwareMercado
         public static string pagamento;
         public static string troco;
 
-        public novaCompra()
+        private MDI _funcao;
+
+        public novaCompra(MDI MDI)
         {
             InitializeComponent();
+
+            _funcao = MDI;
 
         }
 
@@ -33,7 +37,7 @@ namespace SoftwareMercado
 
 
             PagamentoLBL.Text = novaCompra.pagamento;
-            
+
             PagamentoLBL.Visible = true;
             panel4.Visible = true;
 
@@ -45,6 +49,7 @@ namespace SoftwareMercado
 
             TrocoLBL.Text = novaCompra.troco;
             TrocoLBL.Visible = true;
+            LBLtr.Visible = true;
 
         }
 
@@ -73,7 +78,7 @@ namespace SoftwareMercado
 
             qtdeLBL.Visible = false;
             precoLBL.Visible = false;
-
+            LBLtr.Visible = false;
             ultimoProdutoLBL.Visible = false;
             TotalCompraLBL.Visible = false;
             PagamentoLBL.Visible = false;
@@ -81,7 +86,7 @@ namespace SoftwareMercado
             panel4.Visible = false;
             PagamentoLBL.Text = novaCompra.pagamento;
 
-            if(PagamentoLBL.Text == "")
+            if (PagamentoLBL.Text == "")
             {
 
                 PagamentoLBL.Visible = true;
@@ -360,18 +365,19 @@ namespace SoftwareMercado
                                     totalCompra = preco * resultado;
                                     totalCompra = totalCompra + cont;
                                     TotalCompraLBL.Text = totalCompra.ToString("C");
-                                    novaCompra.troco = totalCompra.ToString("C");
                                     cont = totalCompra;
                                     quantidadeTXT.Text = "";
+                                    novaCompra.troco = cont.ToString();
 
                                 }
 
+                                novaCompra.troco = cont.ToString();
                                 ultimoProdutoLBL.Visible = true;
                                 qtdeLBL.Visible = true;
                                 precoLBL.Text = preco.ToString("C");
                                 precoLBL.Visible = true;
                                 TotalCompraLBL.Visible = true;
-                                
+
 
                             }
 
@@ -406,7 +412,9 @@ namespace SoftwareMercado
         private void button3_Click(object sender, EventArgs e)
 
         {
-
+            CBOproduto.Visible = false;
+            quantidadeTXT.Visible = false;
+            button1.Visible = false;
             FormaPagamento FRM = new FormaPagamento(this);
             FRM.ShowDialog();
 
@@ -428,7 +436,21 @@ namespace SoftwareMercado
         private void novaCompra_Enter(object sender, EventArgs e)
         {
 
-            
+
+
+        }
+
+        private void PagamentoLBL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            novaCompra.venda = "";
+            _funcao.ClicarBotao1();
+
 
         }
     }
