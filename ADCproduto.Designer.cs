@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            label1 = new Label();
+            button2 = new Button();
+            button1 = new Button();
+            valorTXT = new TextBox();
+            quantidadeTXT = new TextBox();
+            nomeTXT = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,63 +48,13 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(valorTXT);
+            panel1.Controls.Add(quantidadeTXT);
+            panel1.Controls.Add(nomeTXT);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(344, 198);
             panel1.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(18, 36);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(227, 36);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 0;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(227, 89);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.AppWorkspace;
-            button1.Location = new Point(18, 132);
-            button1.Name = "button1";
-            button1.Size = new Size(100, 50);
-            button1.TabIndex = 1;
-            button1.Text = "Adicionar";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = SystemColors.AppWorkspace;
-            button2.Location = new Point(227, 132);
-            button2.Name = "button2";
-            button2.Size = new Size(100, 50);
-            button2.TabIndex = 1;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(18, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(103, 15);
-            label1.TabIndex = 2;
-            label1.Text = "Nome do produto";
             // 
             // label2
             // 
@@ -124,6 +74,59 @@
             label3.TabIndex = 2;
             label3.Text = "valor";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(18, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(103, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Nome do produto";
+            // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.AppWorkspace;
+            button2.Location = new Point(227, 132);
+            button2.Name = "button2";
+            button2.Size = new Size(100, 50);
+            button2.TabIndex = 1;
+            button2.Text = "Cancelar";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.AppWorkspace;
+            button1.Location = new Point(18, 132);
+            button1.Name = "button1";
+            button1.Size = new Size(100, 50);
+            button1.TabIndex = 1;
+            button1.Text = "Adicionar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // valorTXT
+            // 
+            valorTXT.Location = new Point(227, 89);
+            valorTXT.Name = "valorTXT";
+            valorTXT.Size = new Size(100, 23);
+            valorTXT.TabIndex = 0;
+            valorTXT.Leave += valorTXT_Leave;
+            // 
+            // quantidadeTXT
+            // 
+            quantidadeTXT.Location = new Point(227, 36);
+            quantidadeTXT.Name = "quantidadeTXT";
+            quantidadeTXT.Size = new Size(100, 23);
+            quantidadeTXT.TabIndex = 0;
+            // 
+            // nomeTXT
+            // 
+            nomeTXT.Location = new Point(18, 36);
+            nomeTXT.Name = "nomeTXT";
+            nomeTXT.Size = new Size(100, 23);
+            nomeTXT.TabIndex = 0;
+            // 
             // ADCproduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -133,6 +136,7 @@
             Controls.Add(panel1);
             Name = "ADCproduto";
             Text = "ADCproduto";
+            Load += ADCproduto_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -141,9 +145,9 @@
         #endregion
 
         private Panel panel1;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox valorTXT;
+        private TextBox quantidadeTXT;
+        private TextBox nomeTXT;
         private Button button1;
         private Label label2;
         private Label label3;

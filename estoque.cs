@@ -21,8 +21,8 @@ namespace SoftwareMercado
         private void button2_Click(object sender, EventArgs e)
         {
 
-            //AdicionarProduto FRM = new AdicionarProduto();
-            //FRM.ShowDialog();
+            ADCproduto FRM = new ADCproduto();
+            FRM.ShowDialog();
 
         }
 

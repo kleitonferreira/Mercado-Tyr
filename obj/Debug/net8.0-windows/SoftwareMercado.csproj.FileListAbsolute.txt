@@ -40,3 +40,4 @@ C:\Users\Kleiton Ferreira\Desktop\Projeto c#\Software para mercado\SoftwareMerca
 C:\Users\Kleiton Ferreira\Desktop\Projeto c#\Software para mercado\SoftwareMercado\obj\Debug\net8.0-windows\SoftwareMercado.ExcluirProduto.resources
 C:\Users\Kleiton Ferreira\Desktop\Projeto c#\Software para mercado\SoftwareMercado\obj\Debug\net8.0-windows\SoftwareMercado.FecharCaixa.resources
 C:\Users\Kleiton Ferreira\Desktop\Projeto c#\Software para mercado\SoftwareMercado\obj\Debug\net8.0-windows\SoftwareMercado.FormaPagamento.resources
+C:\Users\Kleiton Ferreira\Desktop\Projeto c#\Software para mercado\SoftwareMercado\obj\Debug\net8.0-windows\SoftwareMercado.ADCproduto.resources
