@@ -110,7 +110,7 @@ namespace SoftwareMercado
         {
 
             string sql = "select nome_produto as 'nome',quantidade_produto as 'quantidade', valor_produto as 'Preço' from produto " +
-                "where Status_produto = 'ATIVO'";
+                "where quantidade_produto > 0";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
             MySqlDataAdapter ad = new MySqlDataAdapter(sql, conexao);
@@ -160,7 +160,7 @@ namespace SoftwareMercado
         {
 
             string sql = "select nome_produto as 'nome',quantidade_produto as 'quantidade', valor_produto as 'Preço' from produto " +
-                    "where Status_produto = 'INATIVO'";
+                    "where quantidade_produto <= 0";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
             MySqlDataAdapter ad = new MySqlDataAdapter(sql, conexao);

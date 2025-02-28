@@ -105,7 +105,7 @@ namespace SoftwareMercado
         public void carregarComboProdutos()
         {
 
-            string sql = "select ID_Produto, Nome_Produto from produto";
+            string sql = "select ID_Produto, Nome_Produto from produto where quantidade_Produto > 0";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
             MySqlCommand cmd = new MySqlCommand(sql, conexao);
@@ -301,7 +301,7 @@ namespace SoftwareMercado
 
         }
 
-        int cont = 0;
+        float cont = 0;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -316,15 +316,18 @@ namespace SoftwareMercado
             {
 
                 string quantidade = quantidadeTXT.Text;
-                bool qtdeEhNumero = int.TryParse(quantidade, out int resultado);
+                bool qtdeEhNumero = float.TryParse(quantidade, out float resultado);
 
                 if (qtdeEhNumero == true)
                 {
 
-                    string sql = "insert into itens_venda " +
+                    string sql = "START TRANSACTION;" +
+                    "insert into itens_venda " +
                     "(id_venda_item,id_produto_item,quantidade_produto_item)" +
                     "values" +
-                    "('" + novaCompra.venda + "','" + CBOIDproduto.Text + "','" + quantidade + "')";
+                    "('" + novaCompra.venda + "','" + CBOIDproduto.Text + "','" + quantidade + "') ;" +
+                    "update produto set quantidade_Produto = quantidade_Produto - '"+ quantidade +"' where id_produto = '"+CBOIDproduto.Text+"';" +
+                    "COMMIT;";
 
                     MySqlConnection conexao = new MySqlConnection(strConexao);
                     MySqlCommand cmd = new MySqlCommand(sql, conexao);
@@ -355,11 +358,11 @@ namespace SoftwareMercado
                                 ultimoProdutoLBL.Text = reader[1].ToString();
                                 qtdeLBL.Text = quantidade + " x";
                                 precoLBL.Text = (decimal.Parse(reader[3].ToString())).ToString();
-                                int preco;
-                                int totalCompra;
+                                float preco;
+                                float totalCompra;
 
 
-                                if (Int32.TryParse(precoLBL.Text, out preco))
+                                if (float.TryParse(precoLBL.Text, out preco))
                                 {
 
                                     totalCompra = preco * resultado;
