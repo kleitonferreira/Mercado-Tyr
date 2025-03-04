@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\historico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:historico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\novacompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:novacompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\novacompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:novacompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\mdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:mdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\adcproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:adcproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\mdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:mdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\adcproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:adcproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|c:\\users\\kleiton ferreira\\desktop\\projeto c#\\software para mercado\\softwaremercado\\historico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D59A84F2-B373-460B-B175-6832F0BEF1C9}|SoftwareMercado.csproj|solutionrelative:historico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,34 +30,34 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "MDI.cs",
               "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\MDI.cs",
               "RelativeDocumentMoniker": "MDI.cs",
               "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\MDI.cs",
               "RelativeToolTip": "MDI.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAywGEAAAAtAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T19:23:31.053Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "estoque.cs",
-              "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\estoque.cs",
-              "RelativeDocumentMoniker": "estoque.cs",
-              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\estoque.cs",
-              "RelativeToolTip": "estoque.cs",
-              "ViewState": "AQIAAGsAAAAAAAAAAAASwGkAAAAjAAAA",
+              "DocumentIndex": 3,
+              "Title": "MDI.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\MDI.cs",
+              "RelativeDocumentMoniker": "MDI.cs",
+              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\MDI.cs [Projeto]",
+              "RelativeToolTip": "MDI.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T23:17:25.051Z",
+              "WhenOpened": "2025-03-04T20:42:14.113Z",
               "IsPinned": true,
-              "EditorCaption": ""
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Bookmark",
@@ -73,63 +65,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "novaCompra.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\novaCompra.cs",
-              "RelativeDocumentMoniker": "novaCompra.cs",
-              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\novaCompra.cs [Projeto]",
-              "RelativeToolTip": "novaCompra.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T22:50:32.142Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "novaCompra.cs",
-              "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\novaCompra.cs",
-              "RelativeDocumentMoniker": "novaCompra.cs",
-              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\novaCompra.cs",
-              "RelativeToolTip": "novaCompra.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAIwGsAAABlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T13:38:28.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ADCproduto.cs",
-              "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\ADCproduto.cs",
-              "RelativeDocumentMoniker": "ADCproduto.cs",
-              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\ADCproduto.cs",
-              "RelativeToolTip": "ADCproduto.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAArwDAAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T13:37:52.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ADCproduto.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\ADCproduto.cs",
-              "RelativeDocumentMoniker": "ADCproduto.cs",
-              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\ADCproduto.cs [Projeto]",
-              "RelativeToolTip": "ADCproduto.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T22:07:40.182Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "estoque.cs [Projeto]",
+              "Title": "estoque.cs",
               "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\estoque.cs",
               "RelativeDocumentMoniker": "estoque.cs",
-              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\estoque.cs [Projeto]",
-              "RelativeToolTip": "estoque.cs [Projeto]",
+              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\estoque.cs",
+              "RelativeToolTip": "estoque.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAmwFcAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T13:36:58.116Z",
+              "WhenOpened": "2025-03-04T21:28:21.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "historico.cs",
+              "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\historico.cs",
+              "RelativeDocumentMoniker": "historico.cs",
+              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\historico.cs",
+              "RelativeToolTip": "historico.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAUwB4AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T21:27:54.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "historico.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\historico.cs",
+              "RelativeDocumentMoniker": "historico.cs",
+              "ToolTip": "C:\\Users\\Kleiton Ferreira\\Desktop\\Projeto c#\\Software para mercado\\SoftwareMercado\\historico.cs [Projeto]",
+              "RelativeToolTip": "historico.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T20:41:39.425Z",
               "EditorCaption": " [Projeto]"
             }
           ]

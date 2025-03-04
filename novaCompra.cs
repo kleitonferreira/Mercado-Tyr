@@ -105,7 +105,7 @@ namespace SoftwareMercado
         public void carregarComboProdutos()
         {
 
-            string sql = "select ID_Produto, Nome_Produto from produto where quantidade_Produto > 0";
+            string sql = "select ID_Produto, Nome_Produto from produto where quantidade_Produto > 0 and Status_Produto = 'ATIVO'";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
             MySqlCommand cmd = new MySqlCommand(sql, conexao);
@@ -323,9 +323,9 @@ namespace SoftwareMercado
 
                     string sql = "START TRANSACTION;" +
                     "insert into itens_venda " +
-                    "(id_venda_item,id_produto_item,quantidade_produto_item)" +
+                    "(id_venda_item,id_produto_item,id_usuario_item,quantidade_produto_item)" +
                     "values" +
-                    "('" + novaCompra.venda + "','" + CBOIDproduto.Text + "','" + quantidade + "') ;" +
+                    "('" + novaCompra.venda + "','" + CBOIDproduto.Text + "','"+MDI.IdUsuario+"','" + quantidade + "') ;" +
                     "update produto set quantidade_Produto = quantidade_Produto - '"+ quantidade +"' where id_produto = '"+CBOIDproduto.Text+"';" +
                     "COMMIT;";
 
@@ -450,6 +450,49 @@ namespace SoftwareMercado
 
         private void button4_Click(object sender, EventArgs e)
         {
+
+            string valor = TotalCompraLBL.Text;
+            valor = valor.Replace("R$ ", "");
+            valor = valor.Replace(",", ".");
+
+
+            string sql = "update venda set " +
+                "pagamento_venda = '"+ PagamentoLBL.Text + "' , " +
+                "valor_venda = '"+valor+"' where id_venda = '"+novaCompra.venda+"'";
+
+            MySqlConnection conexao = new MySqlConnection(strConexao);
+            MySqlCommand cmd = new MySqlCommand(sql, conexao);
+            cmd.CommandType = CommandType.Text;
+
+            conexao.Open();
+
+            try
+            {
+
+                int RowsAffected = cmd.ExecuteNonQuery();
+
+                if (RowsAffected > 0)
+                {
+
+
+                
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ERRO: " + ex.Message);
+
+            }
+            finally
+            {
+
+                conexao.Close();
+
+            }
+
+
 
             novaCompra.venda = "";
             _funcao.ClicarBotao1();

@@ -37,7 +37,7 @@ namespace SoftwareMercado
         private void carregarComboProduto()
         {
 
-            string sql = "select ID_Produto, Nome_Produto from produto";
+            string sql = "select ID_Produto, Nome_Produto from produto where Status_Produto = 'ATIVO'";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
             MySqlCommand cmd = new MySqlCommand(sql, conexao);
@@ -105,7 +105,7 @@ namespace SoftwareMercado
 
         {
 
-            string sql = "delete from produto Where id_produto = " + CBOid.Text;
+            string sql = "update produto set Status_Produto ='INATIVO' where id_produto =" + CBOid.Text;
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
             MySqlCommand cmd = new MySqlCommand(sql, conexao);

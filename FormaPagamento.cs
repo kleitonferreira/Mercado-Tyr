@@ -89,6 +89,8 @@ namespace SoftwareMercado
                     
             }
 
+            string sql = "update venda set valor_venda = '"+ novaCompra.troco+ "' where ID_venda = '"+novaCompra.venda+"'" ;
+
             MessageBox.Show(novaCompra.pagamento);
             _funcao.LabelPagamento();
             this.Close();

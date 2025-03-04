@@ -16,6 +16,7 @@ namespace SoftwareMercado
 
         public static string strConexao = "server=localhost;uid=root;database = mercado";
         public static string NomeUsuario;
+        public static string IdUsuario;
         public static string caixa;
         public static string statusCaixa;
         public static string tela;

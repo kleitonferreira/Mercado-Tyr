@@ -85,7 +85,7 @@ namespace SoftwareMercado
                 if (reader.Read())
                 {
 
-
+                    MDI.IdUsuario = reader[0].ToString();
                     MDI.NomeUsuario = reader[1].ToString();
                     MDI.caixa = reader[2].ToString();
 
