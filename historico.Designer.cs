@@ -40,8 +40,8 @@
             checkBox1 = new CheckBox();
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
+            dateTimeFim = new DateTimePicker();
+            dateTimeInicio = new DateTimePicker();
             label3 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -113,6 +113,7 @@
             button1.TabIndex = 0;
             button1.Text = "Pesquisar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel2
             // 
@@ -121,8 +122,8 @@
             panel2.Controls.Add(checkBox1);
             panel2.Controls.Add(comboBox2);
             panel2.Controls.Add(comboBox1);
-            panel2.Controls.Add(dateTimePicker2);
-            panel2.Controls.Add(dateTimePicker1);
+            panel2.Controls.Add(dateTimeFim);
+            panel2.Controls.Add(dateTimeInicio);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label4);
@@ -171,19 +172,19 @@
             comboBox1.Size = new Size(139, 23);
             comboBox1.TabIndex = 2;
             // 
-            // dateTimePicker2
+            // dateTimeFim
             // 
-            dateTimePicker2.Location = new Point(54, 75);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(240, 23);
-            dateTimePicker2.TabIndex = 1;
+            dateTimeFim.Location = new Point(54, 75);
+            dateTimeFim.Name = "dateTimeFim";
+            dateTimeFim.Size = new Size(240, 23);
+            dateTimeFim.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // dateTimeInicio
             // 
-            dateTimePicker1.Location = new Point(54, 44);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(240, 23);
-            dateTimePicker1.TabIndex = 1;
+            dateTimeInicio.Location = new Point(54, 44);
+            dateTimeInicio.Name = "dateTimeInicio";
+            dateTimeInicio.Size = new Size(240, 23);
+            dateTimeInicio.TabIndex = 1;
             // 
             // label3
             // 
@@ -272,8 +273,8 @@
         private DataGridView dataGridHist;
         private Panel panel3;
         private Label label1;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimeFim;
+        private DateTimePicker dateTimeInicio;
         private Label label3;
         private Label label2;
         private CheckBox checkBox2;
