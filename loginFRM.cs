@@ -57,7 +57,7 @@ namespace SoftwareMercado
         private void loginFRM_Load(object sender, EventArgs e)
 
         {
-
+             
             TestarConexao();
 
         }
