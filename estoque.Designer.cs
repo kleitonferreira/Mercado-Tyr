@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
             dataGridEstoque = new DataGridView();
             panel2 = new Panel();
@@ -55,13 +58,38 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(822, 540);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // dataGridEstoque
             // 
             dataGridEstoque.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridEstoque.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridEstoque.Location = new Point(80, 106);
             dataGridEstoque.Name = "dataGridEstoque";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(3, 62, 140);
+            dataGridEstoque.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridEstoque.Size = new Size(660, 418);
             dataGridEstoque.TabIndex = 1;
             // 

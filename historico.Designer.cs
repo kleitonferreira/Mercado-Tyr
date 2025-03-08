@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(historico));
             panel1 = new Panel();
             dataGridHist = new DataGridView();
@@ -66,9 +70,45 @@
             // 
             // dataGridHist
             // 
+            dataGridHist.AllowUserToAddRows = false;
+            dataGridHist.AllowUserToDeleteRows = false;
+            dataGridHist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridHist.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridHist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridHist.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridHist.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridHist.Location = new Point(19, 111);
             dataGridHist.Name = "dataGridHist";
+            dataGridHist.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridHist.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(3, 62, 140);
+            dataGridHist.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridHist.Size = new Size(787, 374);
             dataGridHist.TabIndex = 2;
             // 

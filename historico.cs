@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SoftwareMercado
 {
@@ -97,16 +98,16 @@ namespace SoftwareMercado
             string dataInicio = Inicio.Replace("00:00:00", "");
             string dataFim = Fim.Replace("00:00:00", "");
 
-            string sql = "SELECT venda.data_venda AS 'data'," +
-                "venda.status_venda AS 'status'," +
-                "itens_venda.id_usuario_item AS 'operador'," +
+            string sql = "SELECT venda.data_venda AS 'Data'," +
+                "venda.status_venda AS 'Status'," +
+                "itens_venda.id_usuario_item AS 'Operador'," +
                 "venda.pagamento_venda AS 'Pagamento'," +
-                "venda.valor_venda AS 'total'" +
+                "venda.valor_venda AS 'Total'" +
                 "FROM venda " +
                 "INNER JOIN " +
                 "itens_venda ON itens_venda.id_venda_item = venda.ID_venda " +
                 "WHERE venda.data_venda BETWEEN '" + dataInicio + "' AND '" + dataFim + " '" +
-                "and itens_venda.id_usuario_item = '" + CBOidOperador.Text + "'";
+                "and itens_venda.id_usuario_item = '" + CBOidOperador.Text + "'AND venda.status_venda = 'Iniciada'";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
             MySqlDataAdapter ad = new MySqlDataAdapter(sql, conexao);
@@ -152,7 +153,8 @@ namespace SoftwareMercado
             {
                 decimal total = 0;
 
-                
+                dataGridHist.DataSource = null;
+                dataGridHist.Rows.Clear();
                 Pesquisa_canceladas();
 
                 foreach (DataGridViewRow row in dataGridHist.Rows)
@@ -169,7 +171,7 @@ namespace SoftwareMercado
             if (checkBox2.Checked == true)
             {
                 decimal total = 0;
-
+                dataGridHist.DataSource = null;
                 dataGridHist.Rows.Clear();
                 Pesquisa_concluida();
 
@@ -184,10 +186,11 @@ namespace SoftwareMercado
                 LBLtotal.Text = "Total: " + total.ToString("C");
 
             }
-            else
+            if(checkBox1.Checked == false && checkBox2.Checked == false) 
             {
                 decimal total = 0;
 
+                dataGridHist.DataSource = null;
                 dataGridHist.Rows.Clear();
                 carregar_Datagridhist();
 
@@ -203,6 +206,8 @@ namespace SoftwareMercado
 
             }
 
+          
+
         }
 
         private void Pesquisa_concluida()
@@ -215,11 +220,11 @@ namespace SoftwareMercado
             string dataInicio = Inicio.Replace("00:00:00", "");
             string dataFim = Fim.Replace("00:00:00", "");
 
-            string sql = "SELECT venda.data_venda AS 'data'," +
-                "venda.status_venda AS 'status'," +
-                "itens_venda.id_usuario_item AS 'operador'," +
+            string sql = "SELECT venda.data_venda AS 'Data'," +
+                "venda.status_venda AS 'Status'," +
+                "itens_venda.id_usuario_item AS 'Operador'," +
                 "venda.pagamento_venda AS 'Pagamento'," +
-                "venda.valor_venda AS 'total'" +
+                "venda.valor_venda AS 'Total'" +
                 "FROM venda " +
                 "INNER JOIN " +
                 "itens_venda ON itens_venda.id_venda_item = venda.ID_venda " +
@@ -270,15 +275,15 @@ namespace SoftwareMercado
             string dataInicio = Inicio.Replace("00:00:00", "");
             string dataFim = Fim.Replace("00:00:00", "");
 
-            string sql = "SELECT venda.data_venda AS 'data'," +
-                "venda.status_venda AS 'status'," +
-                "itens_venda.id_usuario_item AS 'operador'," +
+            string sql = "SELECT venda.data_venda AS 'Data'," +
+                "venda.status_venda AS 'Status'," +
+                "itens_venda.id_usuario_item AS 'Operador'," +
                 "venda.pagamento_venda AS 'Pagamento'," +
-                "venda.valor_venda AS 'total'" +
+                "venda.valor_venda AS 'Total'" +
                 "FROM venda " +
                 "INNER JOIN " +
                 "itens_venda ON itens_venda.id_venda_item = venda.ID_venda " +
-                "WHERE venda.data_venda BETWEEN '" + dataInicio + "' AND '" + dataFim + "' AND venda.status_venda != 'Iniciada'" +
+                "WHERE venda.data_venda BETWEEN '" + dataInicio + "' AND '" + dataFim + "' AND venda.status_venda <> 'Iniciada'" +
                 "and itens_venda.id_usuario_item = '" + CBOidOperador.Text + "'";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);

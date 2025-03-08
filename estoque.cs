@@ -59,7 +59,7 @@ namespace SoftwareMercado
         private void carregarDataGridProduto()
         {
 
-            string sql = "select nome_produto as 'nome',quantidade_produto as 'quantidade', valor_produto as 'Preço' from produto";
+            string sql = "select nome_produto as 'Nome',quantidade_produto as 'Quantidade', valor_produto as 'Preço' from produto";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
             MySqlDataAdapter ad = new MySqlDataAdapter(sql, conexao);
@@ -109,7 +109,7 @@ namespace SoftwareMercado
         private void CarregarDataGridDisp()
         {
 
-            string sql = "select nome_produto as 'nome',quantidade_produto as 'quantidade', valor_produto as 'Preço' from produto " +
+            string sql = "select nome_produto as 'Nome',quantidade_produto as 'Quantidade', valor_produto as 'Preço' from produto " +
                 "where quantidade_produto > 0";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
@@ -159,7 +159,7 @@ namespace SoftwareMercado
         private void CarregarDataGridFalta()
         {
 
-            string sql = "select nome_produto as 'nome',quantidade_produto as 'quantidade', valor_produto as 'Preço' from produto " +
+            string sql = "select nome_produto as 'Nome',quantidade_produto as 'Quantidade', valor_produto as 'Preço' from produto " +
                     "where quantidade_produto <= 0";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
@@ -196,6 +196,11 @@ namespace SoftwareMercado
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

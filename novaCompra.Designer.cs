@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             dataGridProdutosVenda = new DataGridView();
             panel3 = new Panel();
@@ -69,10 +71,27 @@
             // 
             // dataGridProdutosVenda
             // 
+            dataGridProdutosVenda.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridProdutosVenda.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridProdutosVenda.Dock = DockStyle.Fill;
             dataGridProdutosVenda.Location = new Point(0, 87);
             dataGridProdutosVenda.Name = "dataGridProdutosVenda";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridProdutosVenda.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridProdutosVenda.Size = new Size(822, 366);
             dataGridProdutosVenda.TabIndex = 2;
             // 
@@ -192,7 +211,7 @@
             // LBLtr
             // 
             LBLtr.AutoSize = true;
-            LBLtr.Location = new Point(497, 42);
+            LBLtr.Location = new Point(497, 51);
             LBLtr.Name = "LBLtr";
             LBLtr.Size = new Size(39, 15);
             LBLtr.TabIndex = 5;
@@ -252,7 +271,7 @@
             // 
             TrocoLBL.AutoSize = true;
             TrocoLBL.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TrocoLBL.Location = new Point(497, 57);
+            TrocoLBL.Location = new Point(542, 41);
             TrocoLBL.Name = "TrocoLBL";
             TrocoLBL.Size = new Size(18, 30);
             TrocoLBL.TabIndex = 3;
@@ -262,7 +281,7 @@
             // 
             PagamentoLBL.AutoSize = true;
             PagamentoLBL.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PagamentoLBL.Location = new Point(497, 0);
+            PagamentoLBL.Location = new Point(497, 12);
             PagamentoLBL.Name = "PagamentoLBL";
             PagamentoLBL.Size = new Size(18, 30);
             PagamentoLBL.TabIndex = 3;
