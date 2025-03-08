@@ -100,7 +100,7 @@ namespace SoftwareMercado
 
             string sql = "SELECT venda.data_venda AS 'Data'," +
                 "venda.status_venda AS 'Status'," +
-                "itens_venda.id_usuario_item AS 'Operador'," +
+                "itens_venda.nome_usuario_item AS 'Operador'," +
                 "venda.pagamento_venda AS 'Pagamento'," +
                 "venda.valor_venda AS 'Total'" +
                 "FROM venda " +

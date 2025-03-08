@@ -153,5 +153,89 @@ namespace SoftwareMercado
             FRM.ShowDialog();
 
         }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+
+            palito1.Visible = true;
+            button1.Font = new Font(button1.Font, FontStyle.Underline);
+
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            palito1.Visible = false;
+            button1.Font = new Font(button1.Font, button1.Font.Style & ~FontStyle.Underline);
+
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+
+            palito2.Visible = true;
+            button2.Font = new Font(button1.Font, FontStyle.Underline);
+
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+
+            palito2.Visible = false;
+            button2.Font = new Font(button1.Font, button1.Font.Style & ~FontStyle.Underline);
+
+        }
+
+        private void button3_MouseEnter(object sender, EventArgs e)
+        {
+
+            palito3.Visible = true;
+            button3.Font = new Font(button1.Font, FontStyle.Underline);
+
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+
+            palito3.Visible = false;
+            button3.Font = new Font(button1.Font, button1.Font.Style & ~FontStyle.Underline);
+        }
+
+        private void button4_MouseEnter(object sender, EventArgs e)
+        {
+
+            palito4.Visible = true;
+            button4.Font = new Font(button1.Font, FontStyle.Underline);
+
+
+        }
+
+        private void button4_MouseLeave(object sender, EventArgs e)
+        {
+
+            palito4.Visible = false;
+            button4.Font = new Font(button1.Font, button1.Font.Style & ~FontStyle.Underline);
+
+        }
+
+        private void button5_MouseEnter(object sender, EventArgs e)
+        {
+
+            palito5.Visible = true;
+            button5.Font = new Font(button1.Font, FontStyle.Underline);
+
+        }
+
+        private void button5_MouseLeave(object sender, EventArgs e)
+        {
+
+            palito5.Visible = false;
+            button5.Font = new Font(button1.Font, button1.Font.Style & ~FontStyle.Underline);
+
+        }
     }
 }

@@ -30,6 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDI));
             panelSideMenu = new Panel();
+            palito4 = new Panel();
+            palito5 = new Panel();
+            palito3 = new Panel();
+            palito2 = new Panel();
+            palito1 = new Panel();
+            panel13 = new Panel();
+            panel11 = new Panel();
+            panel10 = new Panel();
+            panel12 = new Panel();
+            panel9 = new Panel();
             caixaLBL = new Label();
             button6 = new Button();
             panel8 = new Panel();
@@ -61,6 +71,16 @@
             // panelSideMenu
             // 
             panelSideMenu.BackColor = Color.FromArgb(219, 219, 219);
+            panelSideMenu.Controls.Add(palito4);
+            panelSideMenu.Controls.Add(palito5);
+            panelSideMenu.Controls.Add(palito3);
+            panelSideMenu.Controls.Add(palito2);
+            panelSideMenu.Controls.Add(palito1);
+            panelSideMenu.Controls.Add(panel13);
+            panelSideMenu.Controls.Add(panel11);
+            panelSideMenu.Controls.Add(panel10);
+            panelSideMenu.Controls.Add(panel12);
+            panelSideMenu.Controls.Add(panel9);
             panelSideMenu.Controls.Add(caixaLBL);
             panelSideMenu.Controls.Add(button6);
             panelSideMenu.Controls.Add(panel8);
@@ -82,6 +102,102 @@
             panelSideMenu.Name = "panelSideMenu";
             panelSideMenu.Size = new Size(200, 614);
             panelSideMenu.TabIndex = 0;
+            // 
+            // palito4
+            // 
+            palito4.BackColor = Color.FromArgb(3, 62, 140);
+            palito4.Location = new Point(60, 366);
+            palito4.Name = "palito4";
+            palito4.Size = new Size(78, 10);
+            palito4.TabIndex = 19;
+            palito4.Visible = false;
+            // 
+            // palito5
+            // 
+            palito5.BackColor = Color.FromArgb(3, 62, 140);
+            palito5.Location = new Point(60, 428);
+            palito5.Name = "palito5";
+            palito5.Size = new Size(78, 10);
+            palito5.TabIndex = 19;
+            palito5.Visible = false;
+            // 
+            // palito3
+            // 
+            palito3.BackColor = Color.FromArgb(3, 62, 140);
+            palito3.Location = new Point(60, 303);
+            palito3.Name = "palito3";
+            palito3.Size = new Size(78, 10);
+            palito3.TabIndex = 19;
+            palito3.Visible = false;
+            // 
+            // palito2
+            // 
+            palito2.BackColor = Color.FromArgb(3, 62, 140);
+            palito2.Location = new Point(60, 240);
+            palito2.Name = "palito2";
+            palito2.Size = new Size(78, 10);
+            palito2.TabIndex = 19;
+            palito2.Visible = false;
+            // 
+            // palito1
+            // 
+            palito1.BackColor = Color.FromArgb(3, 62, 140);
+            palito1.Location = new Point(60, 177);
+            palito1.Name = "palito1";
+            palito1.Size = new Size(78, 10);
+            palito1.TabIndex = 19;
+            palito1.Visible = false;
+            // 
+            // panel13
+            // 
+            panel13.BackColor = Color.FromArgb(242, 135, 5);
+            panel13.BackgroundImage = (Image)resources.GetObject("panel13.BackgroundImage");
+            panel13.BackgroundImageLayout = ImageLayout.Stretch;
+            panel13.Location = new Point(12, 283);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(25, 25);
+            panel13.TabIndex = 18;
+            // 
+            // panel11
+            // 
+            panel11.BackColor = Color.FromArgb(242, 135, 5);
+            panel11.BackgroundImage = (Image)resources.GetObject("panel11.BackgroundImage");
+            panel11.BackgroundImageLayout = ImageLayout.Stretch;
+            panel11.Location = new Point(12, 345);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(25, 25);
+            panel11.TabIndex = 18;
+            // 
+            // panel10
+            // 
+            panel10.BackColor = Color.FromArgb(242, 135, 5);
+            panel10.BackgroundImage = (Image)resources.GetObject("panel10.BackgroundImage");
+            panel10.BackgroundImageLayout = ImageLayout.Stretch;
+            panel10.Location = new Point(12, 411);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(25, 25);
+            panel10.TabIndex = 17;
+            panel10.Paint += panel10_Paint;
+            // 
+            // panel12
+            // 
+            panel12.BackColor = Color.FromArgb(242, 135, 5);
+            panel12.BackgroundImage = (Image)resources.GetObject("panel12.BackgroundImage");
+            panel12.BackgroundImageLayout = ImageLayout.Stretch;
+            panel12.Location = new Point(12, 220);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(25, 25);
+            panel12.TabIndex = 17;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = Color.FromArgb(242, 135, 5);
+            panel9.BackgroundImage = (Image)resources.GetObject("panel9.BackgroundImage");
+            panel9.BackgroundImageLayout = ImageLayout.Stretch;
+            panel9.Location = new Point(12, 156);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(25, 25);
+            panel9.TabIndex = 17;
             // 
             // caixaLBL
             // 
@@ -149,7 +265,7 @@
             button5.BackColor = Color.FromArgb(242, 135, 5);
             button5.Dock = DockStyle.Top;
             button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseOverBackColor = Color.SandyBrown;
+            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(242, 135, 5);
             button5.FlatStyle = FlatStyle.Flat;
             button5.Location = new Point(0, 395);
             button5.Name = "button5";
@@ -157,6 +273,8 @@
             button5.TabIndex = 4;
             button5.Text = "Sair";
             button5.UseVisualStyleBackColor = false;
+            button5.MouseEnter += button5_MouseEnter;
+            button5.MouseLeave += button5_MouseLeave;
             // 
             // panel4
             // 
@@ -171,7 +289,7 @@
             button4.BackColor = Color.FromArgb(242, 135, 5);
             button4.Dock = DockStyle.Top;
             button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseOverBackColor = Color.SandyBrown;
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(242, 135, 5);
             button4.FlatStyle = FlatStyle.Flat;
             button4.Location = new Point(0, 332);
             button4.Name = "button4";
@@ -180,6 +298,8 @@
             button4.Text = "Fechar caixa";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
+            button4.MouseEnter += button4_MouseEnter;
+            button4.MouseLeave += button4_MouseLeave;
             // 
             // panel3
             // 
@@ -194,7 +314,7 @@
             button3.BackColor = Color.FromArgb(242, 135, 5);
             button3.Dock = DockStyle.Top;
             button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseOverBackColor = Color.SandyBrown;
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(242, 135, 5);
             button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(0, 269);
             button3.Name = "button3";
@@ -203,6 +323,8 @@
             button3.Text = "Historico de vendas";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
+            button3.MouseEnter += button3_MouseEnter;
+            button3.MouseLeave += button3_MouseLeave;
             // 
             // panel2
             // 
@@ -217,7 +339,7 @@
             button2.BackColor = Color.FromArgb(242, 135, 5);
             button2.Dock = DockStyle.Top;
             button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseOverBackColor = Color.SandyBrown;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(242, 135, 5);
             button2.FlatStyle = FlatStyle.Flat;
             button2.Location = new Point(0, 206);
             button2.Name = "button2";
@@ -226,6 +348,8 @@
             button2.Text = "Estoque";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
+            button2.MouseEnter += button2_MouseEnter;
+            button2.MouseLeave += button2_MouseLeave;
             // 
             // panel1
             // 
@@ -240,7 +364,7 @@
             button1.BackColor = Color.FromArgb(242, 135, 5);
             button1.Dock = DockStyle.Top;
             button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = Color.SandyBrown;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(242, 135, 5);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = SystemColors.ActiveCaptionText;
             button1.Location = new Point(0, 143);
@@ -251,6 +375,8 @@
             button1.Text = "Nova Compra";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
+            button1.MouseEnter += button1_MouseEnter;
+            button1.MouseLeave += button1_MouseLeave;
             // 
             // panelLogo
             // 
@@ -377,5 +503,15 @@
         private Panel panelDIV;
         private Panel panelChildForm;
         private Label caixaLBL;
+        private Panel panel9;
+        private Panel panel10;
+        private Panel panel11;
+        private Panel panel12;
+        private Panel panel13;
+        private Panel palito1;
+        private Panel palito4;
+        private Panel palito5;
+        private Panel palito3;
+        private Panel palito2;
     }
 }
