@@ -25,15 +25,19 @@ namespace SoftwareMercado
         public MDI()
         {
             InitializeComponent();
+
+
+
         }
 
         private void MDI_Load(object sender, EventArgs e)
 
         {
 
+            timer1.Interval = 1000; // Atualiza a cada 1 segundo
+            timer1.Start(); // Inicia o Timer
 
-
-            dataLBL.Text = DateTime.Now.ToString("dd/MM/yyyy          HH:mm");
+            dataLBL.Text = DateTime.Now.ToString("dd/MM/yyyy");
             telaLBL.Visible = false;
             panelDIV.Visible = false;
 
@@ -235,6 +239,25 @@ namespace SoftwareMercado
 
             palito5.Visible = false;
             button5.Font = new Font(button1.Font, button1.Font.Style & ~FontStyle.Underline);
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            Application.Exit();
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            lblHora.Text = DateTime.Now.ToString("HH:mm");
 
         }
     }

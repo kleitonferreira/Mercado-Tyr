@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDI));
             panelSideMenu = new Panel();
+            lblHora = new Label();
             palito4 = new Panel();
             palito5 = new Panel();
             palito3 = new Panel();
@@ -63,6 +65,7 @@
             UsuarioLBL = new Label();
             panel6 = new Panel();
             panelChildForm = new Panel();
+            timer1 = new System.Windows.Forms.Timer(components);
             panelSideMenu.SuspendLayout();
             panel5.SuspendLayout();
             panelChildForm.SuspendLayout();
@@ -71,6 +74,7 @@
             // panelSideMenu
             // 
             panelSideMenu.BackColor = Color.FromArgb(219, 219, 219);
+            panelSideMenu.Controls.Add(lblHora);
             panelSideMenu.Controls.Add(palito4);
             panelSideMenu.Controls.Add(palito5);
             panelSideMenu.Controls.Add(palito3);
@@ -102,6 +106,17 @@
             panelSideMenu.Name = "panelSideMenu";
             panelSideMenu.Size = new Size(200, 614);
             panelSideMenu.TabIndex = 0;
+            // 
+            // lblHora
+            // 
+            lblHora.AutoSize = true;
+            lblHora.Font = new Font("Segoe UI", 14.25F);
+            lblHora.Location = new Point(143, 589);
+            lblHora.Name = "lblHora";
+            lblHora.Size = new Size(51, 25);
+            lblHora.TabIndex = 20;
+            lblHora.Text = "hora";
+            lblHora.Click += label2_Click;
             // 
             // palito4
             // 
@@ -273,6 +288,7 @@
             button5.TabIndex = 4;
             button5.Text = "Sair";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             button5.MouseEnter += button5_MouseEnter;
             button5.MouseLeave += button5_MouseLeave;
             // 
@@ -456,6 +472,10 @@
             panelChildForm.Size = new Size(846, 564);
             panelChildForm.TabIndex = 3;
             // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
             // MDI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -465,8 +485,9 @@
             Controls.Add(panelChildForm);
             Controls.Add(panel5);
             Controls.Add(panelSideMenu);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "MDI";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Mercado Tyr";
             Load += MDI_Load;
             panelSideMenu.ResumeLayout(false);
@@ -513,5 +534,7 @@
         private Panel palito5;
         private Panel palito3;
         private Panel palito2;
+        private Label lblHora;
+        private System.Windows.Forms.Timer timer1;
     }
 }

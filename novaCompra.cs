@@ -47,9 +47,9 @@ namespace SoftwareMercado
         public void LabelTroco()
         {
 
-            TrocoLBL.Text = novaCompra.troco;
+            TrocoLBL.Text = "Troco: " +novaCompra.troco;
             TrocoLBL.Visible = true;
-            LBLtr.Visible = true;
+            
 
         }
 
@@ -78,7 +78,7 @@ namespace SoftwareMercado
 
             qtdeLBL.Visible = false;
             precoLBL.Visible = false;
-            LBLtr.Visible = false;
+            novaCompra.venda = "";
             ultimoProdutoLBL.Visible = false;
             TotalCompraLBL.Visible = false;
             PagamentoLBL.Visible = false;
@@ -244,7 +244,7 @@ namespace SoftwareMercado
                     if (rowsAffected > 0)
                     {
 
-                        MessageBox.Show("Criou venda");
+                        MessageBox.Show("Venda Iniciada!");
                         string id = "select LAST_INSERT_ID()";
 
                         MySqlConnection con = new MySqlConnection(strConexao);
@@ -260,7 +260,7 @@ namespace SoftwareMercado
                             {
 
                                 novaCompra.venda = reader[0].ToString();
-                                MessageBox.Show(novaCompra.venda);
+                                
 
                             }
 
@@ -323,10 +323,10 @@ namespace SoftwareMercado
 
                     string sql = "START TRANSACTION;" +
                     "insert into itens_venda " +
-                    "(id_venda_item,id_produto_item,id_usuario_item,quantidade_produto_item)" +
+                    "(id_venda_item,id_produto_item,id_usuario_item,nome_usuario_item,quantidade_produto_item)" +
                     "values" +
-                    "('" + novaCompra.venda + "','" + CBOIDproduto.Text + "','"+MDI.IdUsuario+"','" + quantidade + "') ;" +
-                    "update produto set quantidade_Produto = quantidade_Produto - '"+ quantidade +"' where id_produto = '"+CBOIDproduto.Text+"';" +
+                    "('" + novaCompra.venda + "','" + CBOIDproduto.Text + "','" + MDI.IdUsuario + "','"+MDI.NomeUsuario+"','" + quantidade + "') ;" +
+                    "update produto set quantidade_Produto = quantidade_Produto - '" + quantidade + "' where id_produto = '" + CBOIDproduto.Text + "';" +
                     "COMMIT;";
 
                     MySqlConnection conexao = new MySqlConnection(strConexao);
@@ -457,8 +457,8 @@ namespace SoftwareMercado
 
 
             string sql = "update venda set " +
-                "pagamento_venda = '"+ PagamentoLBL.Text + "' , " +
-                "valor_venda = '"+valor+"' where id_venda = '"+novaCompra.venda+"'";
+                "pagamento_venda = '" + PagamentoLBL.Text + "' , " +
+                "valor_venda = '" + valor + "' where id_venda = '" + novaCompra.venda + "'";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
             MySqlCommand cmd = new MySqlCommand(sql, conexao);
@@ -475,7 +475,7 @@ namespace SoftwareMercado
                 {
 
 
-                
+
                 }
 
             }
@@ -497,6 +497,11 @@ namespace SoftwareMercado
             novaCompra.venda = "";
             _funcao.ClicarBotao1();
 
+
+        }
+
+        private void TrocoLBL_Click(object sender, EventArgs e)
+        {
 
         }
     }

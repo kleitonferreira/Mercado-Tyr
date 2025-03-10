@@ -134,7 +134,9 @@
             BackColor = Color.FromArgb(3, 62, 140);
             ClientSize = new Size(368, 222);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "ADCproduto";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ADCproduto";
             Load += ADCproduto_Load;
             panel1.ResumeLayout(false);

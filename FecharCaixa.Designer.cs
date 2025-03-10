@@ -85,6 +85,7 @@
             BackColor = Color.FromArgb(3, 62, 140);
             ClientSize = new Size(368, 222);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FecharCaixa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FecharCaixa";

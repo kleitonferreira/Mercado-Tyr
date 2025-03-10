@@ -102,6 +102,7 @@
             // 
             // pagamentoCBO
             // 
+            pagamentoCBO.DropDownStyle = ComboBoxStyle.DropDownList;
             pagamentoCBO.FormattingEnabled = true;
             pagamentoCBO.Items.AddRange(new object[] { "Dinheiro", "Débito", "Crédito", "Pix" });
             pagamentoCBO.Location = new Point(22, 39);
@@ -117,7 +118,9 @@
             BackColor = Color.FromArgb(3, 62, 140);
             ClientSize = new Size(368, 222);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormaPagamento";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormaPagamento";
             Load += FormaPagamento_Load;
             panel1.ResumeLayout(false);

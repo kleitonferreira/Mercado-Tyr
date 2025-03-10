@@ -146,6 +146,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(242, 135, 5);
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Location = new Point(653, 14);
             button1.Name = "button1";
             button1.Size = new Size(119, 23);
@@ -185,6 +186,7 @@
             // 
             // CBOoperador
             // 
+            CBOoperador.DropDownStyle = ComboBoxStyle.DropDownList;
             CBOoperador.FormattingEnabled = true;
             CBOoperador.Location = new Point(368, 61);
             CBOoperador.Name = "CBOoperador";

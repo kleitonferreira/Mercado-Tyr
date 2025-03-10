@@ -106,7 +106,7 @@
             BackColor = Color.FromArgb(3, 62, 140);
             ClientSize = new Size(368, 222);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "ExcluirProduto";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ExcluirProduto";

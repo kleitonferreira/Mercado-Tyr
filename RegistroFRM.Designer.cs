@@ -196,6 +196,7 @@
             ClientSize = new Size(1046, 614);
             Controls.Add(panel3);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "RegistroFRM";
             StartPosition = FormStartPosition.CenterScreen;
             Load += RegistroFRM_Load;

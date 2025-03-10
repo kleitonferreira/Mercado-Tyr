@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(novaCompra));
             panel1 = new Panel();
             dataGridProdutosVenda = new DataGridView();
             panel3 = new Panel();
@@ -42,7 +43,6 @@
             panelCOR = new Panel();
             TextoCaixa = new Label();
             panel2 = new Panel();
-            LBLtr = new Label();
             panel4 = new Panel();
             qtdeLBL = new Label();
             precoLBL = new Label();
@@ -72,26 +72,26 @@
             // dataGridProdutosVenda
             // 
             dataGridProdutosVenda.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(3, 62, 140);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(3, 62, 140);
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridProdutosVenda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridProdutosVenda.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridProdutosVenda.Dock = DockStyle.Fill;
             dataGridProdutosVenda.Location = new Point(0, 87);
             dataGridProdutosVenda.Name = "dataGridProdutosVenda";
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(3, 62, 140);
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Control;
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(3, 62, 140);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridProdutosVenda.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(3, 62, 140);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridProdutosVenda.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridProdutosVenda.Size = new Size(822, 366);
             dataGridProdutosVenda.TabIndex = 2;
             // 
@@ -130,6 +130,7 @@
             // 
             // CBOproduto
             // 
+            CBOproduto.DropDownStyle = ComboBoxStyle.DropDownList;
             CBOproduto.FormattingEnabled = true;
             CBOproduto.Location = new Point(46, 45);
             CBOproduto.Name = "CBOproduto";
@@ -139,18 +140,19 @@
             // ultimoProdutoLBL
             // 
             ultimoProdutoLBL.AutoSize = true;
-            ultimoProdutoLBL.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ultimoProdutoLBL.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ultimoProdutoLBL.ForeColor = Color.FromArgb(217, 4, 61);
-            ultimoProdutoLBL.Location = new Point(577, 45);
+            ultimoProdutoLBL.Location = new Point(599, 45);
             ultimoProdutoLBL.Name = "ultimoProdutoLBL";
-            ultimoProdutoLBL.Size = new Size(78, 32);
+            ultimoProdutoLBL.Size = new Size(63, 25);
             ultimoProdutoLBL.TabIndex = 4;
             ultimoProdutoLBL.Text = "label2";
             // 
             // button2
             // 
             button2.BackColor = Color.FromArgb(242, 135, 5);
-            button2.Location = new Point(577, 7);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(599, 13);
             button2.Name = "button2";
             button2.Size = new Size(124, 32);
             button2.TabIndex = 2;
@@ -161,13 +163,15 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(242, 135, 5);
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = SystemColors.ControlText;
             button1.Location = new Point(274, 45);
             button1.Margin = new Padding(0);
             button1.Name = "button1";
             button1.Size = new Size(23, 23);
             button1.TabIndex = 2;
-            button1.Text = "+";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -192,7 +196,6 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(LBLtr);
             panel2.Controls.Add(panel4);
             panel2.Controls.Add(qtdeLBL);
             panel2.Controls.Add(precoLBL);
@@ -207,15 +210,6 @@
             panel2.Size = new Size(822, 87);
             panel2.TabIndex = 0;
             panel2.Paint += panel2_Paint;
-            // 
-            // LBLtr
-            // 
-            LBLtr.AutoSize = true;
-            LBLtr.Location = new Point(497, 51);
-            LBLtr.Name = "LBLtr";
-            LBLtr.Size = new Size(39, 15);
-            LBLtr.TabIndex = 5;
-            LBLtr.Text = "Troco:";
             // 
             // panel4
             // 
@@ -246,6 +240,7 @@
             // button4
             // 
             button4.BackColor = Color.FromArgb(217, 4, 61);
+            button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.Location = new Point(707, 20);
             button4.Name = "button4";
@@ -258,6 +253,7 @@
             // button3
             // 
             button3.BackColor = Color.FromArgb(217, 4, 61);
+            button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.Location = new Point(599, 20);
             button3.Name = "button3";
@@ -270,12 +266,13 @@
             // TrocoLBL
             // 
             TrocoLBL.AutoSize = true;
-            TrocoLBL.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TrocoLBL.Location = new Point(542, 41);
+            TrocoLBL.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TrocoLBL.Location = new Point(497, 53);
             TrocoLBL.Name = "TrocoLBL";
-            TrocoLBL.Size = new Size(18, 30);
+            TrocoLBL.Size = new Size(10, 13);
             TrocoLBL.TabIndex = 3;
             TrocoLBL.Text = ".";
+            TrocoLBL.Click += TrocoLBL_Click;
             // 
             // PagamentoLBL
             // 
@@ -342,6 +339,5 @@
         private ComboBox CBOIDproduto;
         private ComboBox CBOproduto;
         private Button button4;
-        private Label LBLtr;
     }
 }

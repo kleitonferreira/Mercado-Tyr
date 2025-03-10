@@ -106,11 +106,12 @@ namespace SoftwareMercado
                 "FROM venda " +
                 "INNER JOIN " +
                 "itens_venda ON itens_venda.id_venda_item = venda.ID_venda " +
-                "WHERE venda.data_venda BETWEEN '" + dataInicio + "' AND '" + dataFim + " '" +
-                "and itens_venda.id_usuario_item = '" + CBOidOperador.Text + "'AND venda.status_venda = 'Iniciada'";
+                "WHERE DATE(venda.data_venda) BETWEEN '" + dataInicio + "' AND '" + dataFim + " '" +
+                "AND itens_venda.id_usuario_item = '" + CBOidOperador.Text + "' AND venda.status_venda = 'Iniciada' " +
+                "GROUP BY venda.id_venda";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
-            MySqlDataAdapter ad = new MySqlDataAdapter(sql, conexao);
+            MySqlDataAdapter ad = new MySqlDataAdapter(sql, conexao);   
             DataSet ds = new DataSet();
             
             conexao.Open();
@@ -228,8 +229,9 @@ namespace SoftwareMercado
                 "FROM venda " +
                 "INNER JOIN " +
                 "itens_venda ON itens_venda.id_venda_item = venda.ID_venda " +
-                "WHERE venda.data_venda BETWEEN '" + dataInicio + "' AND '" + dataFim + "' " +
-                "AND venda.status_venda = 'Iniciada' and itens_venda.id_usuario_item = '" + CBOidOperador.Text + "'";
+                "WHERE DATE(venda.data_venda) BETWEEN '" + dataInicio + "' AND '" + dataFim + "' " +
+                "AND venda.status_venda = 'Iniciada' and itens_venda.id_usuario_item = '" + CBOidOperador.Text + "'" +
+                "GROUP BY venda.id_venda";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
             MySqlDataAdapter ad = new MySqlDataAdapter(sql, conexao);
@@ -283,8 +285,9 @@ namespace SoftwareMercado
                 "FROM venda " +
                 "INNER JOIN " +
                 "itens_venda ON itens_venda.id_venda_item = venda.ID_venda " +
-                "WHERE venda.data_venda BETWEEN '" + dataInicio + "' AND '" + dataFim + "' AND venda.status_venda <> 'Iniciada'" +
-                "and itens_venda.id_usuario_item = '" + CBOidOperador.Text + "'";
+                "WHERE DATE(venda.data_venda) BETWEEN '" + dataInicio + "' AND '" + dataFim + "' AND venda.status_venda <> 'Iniciada'" +
+                "and itens_venda.id_usuario_item = '" + CBOidOperador.Text + "'" +
+                "GROUP BY venda.id_venda";
 
             MySqlConnection conexao = new MySqlConnection(strConexao);
             MySqlDataAdapter ad = new MySqlDataAdapter(sql, conexao);

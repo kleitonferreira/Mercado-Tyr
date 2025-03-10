@@ -77,8 +77,7 @@ namespace SoftwareMercado
                 Int32.TryParse(novaCompra.troco, out valor);
                 Int32.TryParse(trocoTXT.Text, out pagou);
 
-                MessageBox.Show(novaCompra.troco + "");
-                MessageBox.Show(pagou + "");
+               
 
 
                 resultado = pagou - valor;
@@ -91,7 +90,7 @@ namespace SoftwareMercado
 
             string sql = "update venda set valor_venda = '"+ novaCompra.troco+ "' where ID_venda = '"+novaCompra.venda+"'" ;
 
-            MessageBox.Show(novaCompra.pagamento);
+            
             _funcao.LabelPagamento();
             this.Close();
 

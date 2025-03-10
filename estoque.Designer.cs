@@ -109,6 +109,7 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(242, 135, 5);
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Location = new Point(598, 15);
             button2.Name = "button2";
             button2.Size = new Size(142, 32);
@@ -120,6 +121,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(242, 135, 5);
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Location = new Point(598, 53);
             button1.Name = "button1";
             button1.Size = new Size(142, 32);
